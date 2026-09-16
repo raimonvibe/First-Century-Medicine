@@ -11,12 +11,13 @@ export default function Page() {
   return (
     <Article slug="introduction">
       <p>
-        Between about 4 BC and 33 AD, a sick person in the eastern Roman
-        world did not enter a hospital ward. They sent for a household
-        herbalist, a midwife, a travelling Greek-trained physician, a priest,
-        or a holy man — sometimes all of them. What counted as “medicine”
-        was a braid of Hippocratic theory, Roman practicality, Near Eastern
-        pharmacy, and Jewish law.
+        Between about 6 BC and 33 AD — the usual scholarly window for
+        Jesus’s lifetime — a sick person in the eastern Roman world did
+        not enter a hospital ward. They sent for a household herbalist, a
+        midwife, a travelling Greek-trained physician, a priest, or a holy
+        man — sometimes all of them. What counted as “medicine” was a braid
+        of Hippocratic theory, Roman practicality, Near Eastern pharmacy,
+        and Jewish law.
       </p>
       <p>
         There were no germs in the story they told, no antibiotics on the

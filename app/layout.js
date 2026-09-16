@@ -1,6 +1,7 @@
 import { Cormorant_Garamond, Source_Sans_3, Source_Serif_4 } from "next/font/google";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SpeechReader from "@/components/SpeechReader";
 import { DisclaimerBanner } from "@/components/Quote";
 import { site } from "@/lib/chapters";
 import "./globals.css";
@@ -30,6 +31,11 @@ export const metadata = {
   icons: { icon: "/favicon.svg" },
 };
 
+export const viewport = {
+  themeColor: "#fbf6ea",
+  viewportFit: "cover",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html
@@ -39,8 +45,11 @@ export default function RootLayout({ children }) {
       <body className="paper-bg grain flex min-h-full flex-col font-serif text-ink">
         <DisclaimerBanner />
         <Navigation />
-        <main className="flex-1">{children}</main>
+        <main id="content" className="flex-1">
+          {children}
+        </main>
         <Footer />
+        <SpeechReader />
       </body>
     </html>
   );

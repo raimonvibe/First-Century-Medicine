@@ -28,7 +28,10 @@ export function Callout({ title, children }) {
 
 export function DisclaimerBanner() {
   return (
-    <p className="border-b border-sand bg-parchment/80 px-4 py-2 text-center font-sans text-xs leading-relaxed text-ink-soft">
+    <p
+      data-speech-include="true"
+      className="border-b border-sand bg-parchment/80 px-4 py-2 text-center font-sans text-xs leading-relaxed text-ink-soft"
+    >
       Educational history of first-century medicine — not a guide for treating
       illness today.
     </p>
