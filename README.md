@@ -1,8 +1,12 @@
 # Treatments & Herbs
 
+[![Medicine in the Time of Jesus](public/homepage.png)](https://first-century-medicine.vercel.app/)
+
+**Live site:** [https://first-century-medicine.vercel.app/](https://first-century-medicine.vercel.app/)
+
 Educational Next.js site on medicine, treatments, and herbal remedies in the first-century Mediterranean world — the lifetime of Jesus.
 
-The original brief is in `ancient-medicine-playbook.md`. The built site expands that ten-page outline with chapters on physicians, Judea, a timeline, a glossary, and sources, plus an interactive herbal.
+The original brief is in `ancient-medicine-playbook.md`. The built site expands that outline with chapters on physicians, Judea, a timeline, a [words and abbreviations](https://first-century-medicine.vercel.app/words) page, sources, and an interactive herbal.
 
 ## Run locally
 
@@ -27,6 +31,6 @@ Open [http://localhost:3000](http://localhost:3000).
 10. Surgery
 11. Faith and healing
 12. Ten reconstructed cases
-13. Timeline, glossary, sources
+13. Timeline, [words and abbreviations](https://first-century-medicine.vercel.app/words), sources
 
 History only — not medical advice.

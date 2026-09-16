@@ -18,7 +18,7 @@ export default function Home() {
             {site.tagline}
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft md:text-xl">
-            A twelve-chapter course — plus timeline, glossary, and sources —
+            A twelve-chapter course — plus timeline, words, and sources —
             on how people in Jesus’s world explained illness, mixed herbs,
             opened veins, set bones, washed for purity, and prayed for
             healing.

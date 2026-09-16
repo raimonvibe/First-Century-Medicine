@@ -107,6 +107,14 @@ export default function Navigation() {
             Timeline
           </Link>
           <Link
+            href="/words"
+            className={`font-sans text-sm tracking-wide hover:text-terracotta ${
+              pathname === "/words" ? "text-terracotta" : "text-ink"
+            }`}
+          >
+            Words
+          </Link>
+          <Link
             href="/sources"
             className={`font-sans text-sm tracking-wide hover:text-terracotta ${
               pathname === "/sources" ? "text-terracotta" : "text-ink"

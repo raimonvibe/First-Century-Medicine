@@ -108,7 +108,7 @@ export default function Page() {
           Chapters move from the people and the land, through theory
           (humors, bleeding, baths), into the pharmacy (herbs, oils, food),
           then surgery, faith, and reconstructed case visits. A timeline,
-          glossary, and source list sit at the end. Nothing here is a recipe
+          word list, and source list sit at the end. Nothing here is a recipe
           for use.
         </p>
       </Callout>
