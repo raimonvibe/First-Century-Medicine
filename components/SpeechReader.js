@@ -16,6 +16,8 @@ import {
   translateChunk,
 } from "@/lib/speech";
 
+const SPEECH_OPEN_KEY = "fcm-speech-open";
+
 function clearHighlight() {
   document.querySelectorAll(".speech-current").forEach((node) => {
     node.classList.remove("speech-current");
@@ -43,6 +45,7 @@ export default function SpeechReader() {
   const [progress, setProgress] = useState({ current: 0, total: 0 });
   const [message, setMessage] = useState("");
   const [showHelp, setShowHelp] = useState(false);
+  const [open, setOpen] = useState(false);
   const [platform, setPlatform] = useState({
     ios: false,
     android: false,
@@ -58,6 +61,7 @@ export default function SpeechReader() {
   const voicesRef = useRef([]);
   const platformRef = useRef(platform);
   const watchdogRef = useRef(0);
+  const dockRef = useRef(null);
 
   langRef.current = lang;
   rateRef.current = rate;
@@ -284,24 +288,70 @@ export default function SpeechReader() {
     };
   }, []);
 
+  useEffect(() => {
+    const el = dockRef.current;
+    if (!el) return;
+    const syncHeight = () => {
+      document.documentElement.style.setProperty(
+        "--speech-dock-height",
+        `${el.offsetHeight}px`,
+      );
+    };
+    syncHeight();
+    const observer = new ResizeObserver(syncHeight);
+    observer.observe(el);
+    return () => {
+      observer.disconnect();
+      document.documentElement.style.removeProperty("--speech-dock-height");
+    };
+  }, [open, showHelp, supported, message, status]);
+
+  useEffect(() => {
+    try {
+      setOpen(window.localStorage.getItem(SPEECH_OPEN_KEY) === "1");
+    } catch {
+      /* private mode */
+    }
+  }, []);
+
   const busy = status === "playing" || status === "translating";
+
+  const setDockOpen = (next) => {
+    setOpen(next);
+    if (!next) setShowHelp(false);
+    try {
+      window.localStorage.setItem(SPEECH_OPEN_KEY, next ? "1" : "0");
+    } catch {
+      /* private mode */
+    }
+  };
+
+  const statusText =
+    status === "idle"
+      ? "Reads this page with your device voices — not Apple Speak Screen."
+      : status === "translating"
+        ? "Translating the next passage…"
+        : status === "paused"
+          ? `Paused at passage ${progress.current} of ${progress.total}`
+          : `Passage ${progress.current} of ${progress.total}`;
 
   return (
     <div
+      ref={dockRef}
       data-speech-player="true"
       className="speech-dock"
       role="region"
       aria-label="Page reader"
     >
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-3 md:px-6">
-        <div className="flex flex-wrap items-center gap-2">
+      <div className="mx-auto flex max-w-6xl flex-col gap-2 px-3 py-2 sm:px-4 sm:py-2.5 md:px-6">
+        <div className="speech-bar">
           {!supported ? (
-            <p className="font-sans text-sm text-ink-soft">
+            <p className="speech-status">
               This browser cannot read pages aloud. On iPhone use Safari; on
               Android use Chrome.
             </p>
           ) : (
-            <>
+            <div className="speech-actions">
               {status === "paused" ? (
                 <button
                   type="button"
@@ -339,80 +389,112 @@ export default function SpeechReader() {
               >
                 Next
               </button>
-              <label className="speech-field">
-                <span>Language</span>
-                <select
-                  value={lang}
-                  onChange={(event) => changeLanguage(event.target.value)}
-                >
-                  {languages.map((item) => (
-                    <option key={item.code} value={item.code}>
-                      {item.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="speech-field">
-                <span>Speed</span>
-                <select
-                  value={String(rate)}
-                  onChange={(event) => setRate(Number(event.target.value))}
-                >
-                  <option value="0.8">0.8×</option>
-                  <option value="1">1×</option>
-                  <option value="1.15">1.15×</option>
-                  <option value="1.3">1.3×</option>
-                </select>
-              </label>
-              <button
-                type="button"
-                className="speech-btn"
-                onClick={() => setShowHelp((value) => !value)}
-                aria-expanded={showHelp}
-              >
-                iPhone / Android
-              </button>
-            </>
+            </div>
           )}
-        </div>
-        <div className="flex flex-wrap items-center justify-between gap-2 font-sans text-xs text-ink-soft">
-          <p aria-live="polite">
-            {status === "idle"
-              ? "Reads this page with your device voices — not Apple Speak Screen."
-              : status === "translating"
-                ? "Translating the next passage…"
-                : status === "paused"
-                  ? `Paused at passage ${progress.current} of ${progress.total}`
-                  : `Passage ${progress.current} of ${progress.total}`}
+          <p className="speech-kicker hidden sm:block">Page reader</p>
+          <p className="speech-status" aria-live="polite">
+            {statusText}
           </p>
-          {message ? <p className="text-wine">{message}</p> : null}
+          <button
+            type="button"
+            className="speech-btn speech-toggle"
+            onClick={() => setDockOpen(!open)}
+            aria-expanded={open}
+            aria-controls="speech-panel"
+          >
+            <span className="sm:hidden">{open ? "Hide" : "More"}</span>
+            <span className="hidden sm:inline">
+              {open ? "Hide reader" : "Show reader"}
+            </span>
+            <svg
+              viewBox="0 0 20 20"
+              className={`h-4 w-4 shrink-0 transition-transform ${open ? "rotate-180" : ""}`}
+              aria-hidden="true"
+            >
+              <path
+                d="M5 12.2 10 7.8l5 4.4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
-        {showHelp ? (
-          <div className="border border-sand bg-cream px-3 py-3 font-sans text-xs leading-relaxed text-ink-soft">
-            {platform.ios ? (
-              <p>
-                iPhone: this full-width bar uses Safari’s Web Speech API and
-                Siri voices, so you do not get the round Speak Screen bubble.
-                Use Safari, not Chrome. Install extra languages in Settings →
-                Accessibility → Spoken Content → Voices (prefer Enhanced, not
-                Compact). The first tap must start listening. Pause remembers
-                your place, because iOS pause is unreliable.
-              </p>
-            ) : platform.android ? (
-              <p>
-                Android: Chrome or Samsung Internet speaks through the system
-                text-to-speech engine. Pause is stop-and-hold, because Android
-                treats pause as cancel. Add voices in Settings → Accessibility
-                → Text-to-speech output.
-              </p>
-            ) : (
-              <p>
-                Desktop browsers speak through installed voices. Chrome is
-                limited to short passages, so this player feeds the page in
-                small chunks. On iPhone use Safari with this bar — not the
-                floating Speak Screen control. On Android use Chrome.
-              </p>
-            )}
+        {open ? (
+          <div id="speech-panel" className="speech-panel">
+            <div className="speech-toolbar">
+              {supported ? (
+                <div className="speech-settings">
+                  <label className="speech-field">
+                    <span>Language</span>
+                    <select
+                      value={lang}
+                      onChange={(event) => changeLanguage(event.target.value)}
+                    >
+                      {languages.map((item) => (
+                        <option key={item.code} value={item.code}>
+                          {item.label}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+                  <label className="speech-field">
+                    <span>Speed</span>
+                    <select
+                      value={String(rate)}
+                      onChange={(event) => setRate(Number(event.target.value))}
+                    >
+                      <option value="0.8">0.8×</option>
+                      <option value="1">1×</option>
+                      <option value="1.15">1.15×</option>
+                      <option value="1.3">1.3×</option>
+                    </select>
+                  </label>
+                  <button
+                    type="button"
+                    className="speech-btn"
+                    onClick={() => setShowHelp((value) => !value)}
+                    aria-expanded={showHelp}
+                  >
+                    <span className="sm:hidden">Help</span>
+                    <span className="hidden sm:inline">iPhone / Android</span>
+                  </button>
+                </div>
+              ) : null}
+            </div>
+            {message ? (
+              <p className="font-sans text-xs text-wine">{message}</p>
+            ) : null}
+            {showHelp ? (
+              <div className="border border-sand bg-cream px-3 py-3 font-sans text-xs leading-relaxed text-ink-soft">
+                {platform.ios ? (
+                  <p>
+                    iPhone: this full-width bar uses Safari’s Web Speech API and
+                    Siri voices, so you do not get the round Speak Screen bubble.
+                    Use Safari, not Chrome. Install extra languages in Settings →
+                    Accessibility → Spoken Content → Voices (prefer Enhanced, not
+                    Compact). The first tap must start listening. Pause remembers
+                    your place, because iOS pause is unreliable.
+                  </p>
+                ) : platform.android ? (
+                  <p>
+                    Android: Chrome or Samsung Internet speaks through the system
+                    text-to-speech engine. Pause is stop-and-hold, because Android
+                    treats pause as cancel. Add voices in Settings → Accessibility
+                    → Text-to-speech output.
+                  </p>
+                ) : (
+                  <p>
+                    Desktop browsers speak through installed voices. Chrome is
+                    limited to short passages, so this player feeds the page in
+                    small chunks. On iPhone use Safari with this bar — not the
+                    floating Speak Screen control. On Android use Chrome.
+                  </p>
+                )}
+              </div>
+            ) : null}
           </div>
         ) : null}
       </div>

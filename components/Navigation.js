@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { chapters, groups, site } from "@/lib/chapters";
 import { OliveMark } from "@/components/Ornament";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -20,25 +21,25 @@ export default function Navigation() {
     <header className="sticky top-0 z-40 border-b border-sand/80 bg-cream/90 backdrop-blur-md">
       <a
         href="#content"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:bg-olive focus:px-3 focus:py-2 focus:text-cream"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:bg-grove focus:px-3 focus:py-2 focus:text-foam"
       >
         Skip to content
       </a>
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
-        <Link href="/" className="flex items-center gap-3 text-olive">
-          <OliveMark className="h-10 w-10" />
-          <span className="leading-tight">
-            <span className="block font-display text-lg font-semibold tracking-wide md:text-xl">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-3 py-2 sm:gap-4 sm:px-4 sm:py-3 md:px-6">
+        <Link href="/" className="flex min-w-0 items-center gap-2 text-olive sm:gap-3">
+          <OliveMark className="h-8 w-8 shrink-0 sm:h-10 sm:w-10" />
+          <span className="min-w-0 leading-tight">
+            <span className="block font-display text-base font-semibold tracking-wide sm:text-lg md:text-xl">
               {site.name}
             </span>
-            <span className="hidden font-sans text-[11px] uppercase tracking-[0.22em] text-ink-soft sm:block">
+            <span className="hidden font-sans text-[11px] uppercase tracking-[0.18em] text-ink-soft sm:block sm:tracking-[0.22em]">
               {site.tagline}
             </span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
-          <div className="relative">
+        <nav className="relative hidden items-center gap-4 lg:flex xl:gap-6" aria-label="Primary">
+          <div>
             <button
               type="button"
               className="font-sans text-sm tracking-wide text-ink hover:text-terracotta"
@@ -48,8 +49,8 @@ export default function Navigation() {
               Chapters
             </button>
             {courseOpen ? (
-              <div className="absolute right-0 top-full z-50 mt-3 w-[36rem] rounded-sm border border-sand bg-cream p-4 shadow-lg">
-                <div className="grid grid-cols-2 gap-4">
+              <div className="absolute right-0 top-full z-50 mt-3 w-[min(36rem,calc(100vw-2rem))] max-h-[min(70vh,32rem)] overflow-auto rounded-sm border border-sand bg-cream p-4 shadow-lg">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   {groups.map((group) => (
                     <div key={group}>
                       <p className="mb-2 font-sans text-[10px] uppercase tracking-[0.2em] text-gold">
@@ -122,20 +123,24 @@ export default function Navigation() {
           >
             Sources
           </Link>
+          <ThemeToggle />
         </nav>
 
-        <button
-          type="button"
-          className="font-sans text-sm uppercase tracking-widest text-olive lg:hidden"
-          onClick={() => setOpen((value) => !value)}
-          aria-expanded={open}
-        >
-          {open ? "Close" : "Menu"}
-        </button>
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3 lg:hidden">
+          <ThemeToggle />
+          <button
+            type="button"
+            className="min-h-10 px-1 font-sans text-sm uppercase tracking-widest text-olive"
+            onClick={() => setOpen((value) => !value)}
+            aria-expanded={open}
+          >
+            {open ? "Close" : "Menu"}
+          </button>
+        </div>
       </div>
 
       {open ? (
-        <div className="border-t border-sand bg-cream px-4 py-4 lg:hidden">
+        <div className="max-h-[min(70dvh,calc(100dvh-var(--speech-dock-height,10.5rem)-5rem))] overflow-y-auto overscroll-contain border-t border-sand bg-cream px-4 py-4 lg:hidden">
           {groups.map((group) => (
             <div key={group} className="mb-4">
               <p className="mb-1 font-sans text-[10px] uppercase tracking-[0.2em] text-gold">

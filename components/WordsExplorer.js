@@ -55,7 +55,7 @@ export default function WordsExplorer() {
             onClick={() => setKind(item.id)}
             className={`rounded-full border px-3 py-1 font-sans text-xs ${
               kind === item.id
-                ? "border-olive bg-olive text-cream"
+                ? "border-olive bg-grove text-foam"
                 : "border-sand text-ink-soft hover:border-gold"
             }`}
           >
@@ -69,7 +69,7 @@ export default function WordsExplorer() {
           type="button"
           onClick={() => setLetter("all")}
           className={`min-w-8 rounded-sm px-2 py-1 font-sans text-xs ${
-            letter === "all" ? "bg-terracotta text-cream" : "text-ink-soft hover:bg-parchment"
+            letter === "all" ? "bg-terracotta text-foam" : "text-ink-soft hover:bg-parchment"
           }`}
         >
           All
@@ -80,7 +80,7 @@ export default function WordsExplorer() {
             type="button"
             onClick={() => setLetter(item)}
             className={`min-w-8 rounded-sm px-2 py-1 font-sans text-xs ${
-              letter === item ? "bg-terracotta text-cream" : "text-ink-soft hover:bg-parchment"
+              letter === item ? "bg-terracotta text-foam" : "text-ink-soft hover:bg-parchment"
             }`}
           >
             {item}
@@ -96,7 +96,7 @@ export default function WordsExplorer() {
         {results.map((entry) => (
           <div
             key={entry.term}
-            className="grid gap-2 py-5 md:grid-cols-[14rem_1fr]"
+            className="grid gap-2 py-5 md:grid-cols-[minmax(8rem,14rem)_1fr]"
           >
             <dt>
               <span className="font-display text-xl text-olive">{entry.term}</span>

@@ -1,11 +1,13 @@
 import { Article } from "@/components/Article";
 import Quote, { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Bloodletting and Venesection",
   description:
-    "Why first-century physicians opened veins, used leeches, and cupped the skin.",
-};
+    "Why Greco-Roman physicians opened veins, applied leeches, or cupped the skin — the most common learned procedure of the age.",
+  path: "/bloodletting",
+});
 
 export default function Page() {
   return (

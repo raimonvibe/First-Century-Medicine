@@ -71,7 +71,7 @@ export default function HerbExplorer() {
             onClick={() => setOrigin(filter.id)}
             className={`rounded-full border px-3 py-1 font-sans text-xs ${
               origin === filter.id
-                ? "border-olive bg-olive text-cream"
+                ? "border-olive bg-grove text-foam"
                 : "border-sand text-ink-soft hover:border-gold"
             }`}
           >
@@ -85,7 +85,7 @@ export default function HerbExplorer() {
           onClick={() => setCondition("all")}
           className={`rounded-full border px-3 py-1 font-sans text-xs ${
             condition === "all"
-              ? "border-terracotta bg-terracotta text-cream"
+              ? "border-terracotta bg-terracotta text-foam"
               : "border-sand text-ink-soft"
           }`}
         >
@@ -98,7 +98,7 @@ export default function HerbExplorer() {
             onClick={() => setCondition(item)}
             className={`rounded-full border px-3 py-1 font-sans text-xs capitalize ${
               condition === item
-                ? "border-terracotta bg-terracotta text-cream"
+                ? "border-terracotta bg-terracotta text-foam"
                 : "border-sand text-ink-soft"
             }`}
           >
@@ -117,14 +117,14 @@ export default function HerbExplorer() {
             >
               <button
                 type="button"
-                className="flex w-full items-start justify-between gap-4 px-4 py-4 text-left"
-                onClick={() => setOpenId(expanded ? "" : herb.id)}
-                aria-expanded={expanded}
-              >
-                <span className="block">
-                  <span className="block font-display text-2xl text-olive">
-                    {herb.name}
-                  </span>
+              className="flex w-full items-start justify-between gap-3 px-3 py-4 text-left sm:gap-4 sm:px-4"
+              onClick={() => setOpenId(expanded ? "" : herb.id)}
+              aria-expanded={expanded}
+            >
+              <span className="block min-w-0">
+                <span className="block font-display text-xl text-olive sm:text-2xl">
+                  {herb.name}
+                </span>
                   <span className="block font-sans text-xs italic text-ink-soft">
                     {herb.latin} · {herb.availability}
                     {herb.biblical ? " · biblical" : ""}
@@ -133,7 +133,7 @@ export default function HerbExplorer() {
                     {herb.summary}
                   </span>
                 </span>
-                <span className="font-sans text-gold">{expanded ? "–" : "+"}</span>
+                <span className="shrink-0 font-sans text-gold">{expanded ? "–" : "+"}</span>
               </button>
               {expanded ? (
                 <div className="space-y-3 border-t border-sand px-4 py-4 text-sm leading-relaxed">

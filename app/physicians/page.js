@@ -1,12 +1,14 @@
 import { Article } from "@/components/Article";
 import { physicians } from "@/lib/physicians";
 import Quote from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Physicians and Writers",
   description:
-    "Hippocrates, Celsus, Dioscorides, Pliny, Luke, and Ben Sira in the medical world around Jesus.",
-};
+    "Hippocrates, Celsus, Dioscorides, Pliny, Luke, and Ben Sira — the physicians and writers who framed healing in Jesus’s world.",
+  path: "/physicians",
+});
 
 export default function Page() {
   return (

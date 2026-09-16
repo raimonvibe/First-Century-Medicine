@@ -1,11 +1,13 @@
 import { Article } from "@/components/Article";
 import Quote, { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Medicine in the Time of Jesus",
   description:
-    "Greek theory, Roman practice, and Judean healing during the lifetime of Jesus.",
-};
+    "Greek theory, Roman practice, and Judean healing in Jesus’s lifetime: a world without germs, antibiotics, or hospitals. Educational history, not advice.",
+  path: "/introduction",
+});
 
 export default function Page() {
   return (

@@ -1,12 +1,14 @@
 import { Article } from "@/components/Article";
 import CaseList from "@/components/CaseList";
 import { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Ten Cases from the First Century",
   description:
-    "Reconstructed physician visits: fever, wounds, fracture, childbirth, melancholy, and more.",
-};
+    "Ten reconstructed first-century visits — fever, wounds, fracture, childbirth, and melancholy — with a modern reading of each.",
+  path: "/cases",
+});
 
 export default function Page() {
   return (

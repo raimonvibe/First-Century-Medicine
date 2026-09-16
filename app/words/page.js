@@ -1,12 +1,14 @@
 import { Article } from "@/components/Article";
 import WordsExplorer from "@/components/WordsExplorer";
 import { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Words and abbreviations",
   description:
-    "Plain-language explanations of every difficult word and abbreviation used on this site.",
-};
+    "Plain-language explanations of every difficult word and abbreviation on this site, from AD and mikveh to venesection.",
+  path: "/words",
+});
 
 export default function Page() {
   return (

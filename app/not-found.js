@@ -13,13 +13,13 @@ export default function NotFound() {
         The leaf you wanted is missing. Return to the course or open the
         remedy list.
       </p>
-      <div className="mt-8 flex justify-center gap-4">
-        <Link href="/" className="bg-olive px-4 py-2 font-sans text-sm text-cream">
+      <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:gap-4">
+        <Link href="/" className="bg-grove px-4 py-2 text-center font-sans text-sm text-foam">
           Home
         </Link>
         <Link
           href="/herbs"
-          className="border border-olive px-4 py-2 font-sans text-sm text-olive"
+          className="border border-olive px-4 py-2 text-center font-sans text-sm text-olive"
         >
           Herbs
         </Link>

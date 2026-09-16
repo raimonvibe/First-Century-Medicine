@@ -2,6 +2,15 @@ import Link from "next/link";
 import { chapters, site } from "@/lib/chapters";
 import { Ornament } from "@/components/Ornament";
 import Quote from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
+
+export const metadata = pageMeta({
+  title: `${site.name} — ${site.tagline}`,
+  description: site.description,
+  path: "/",
+  type: "website",
+  absolute: true,
+});
 
 export default function Home() {
   const featured = chapters.filter((chapter) => chapter.group !== "Reference");
@@ -9,39 +18,39 @@ export default function Home() {
 
   return (
     <div>
-      <section className="relative overflow-hidden px-4 pb-20 pt-16 md:px-6 md:pt-24">
+      <section className="relative overflow-hidden px-4 pb-12 pt-10 sm:pb-20 sm:pt-16 md:px-6 md:pt-24">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="font-sans text-xs uppercase tracking-[0.32em] text-gold">
+          <p className="font-sans text-[0.65rem] uppercase tracking-[0.18em] text-gold sm:text-xs sm:tracking-[0.32em]">
             First-century Mediterranean healing
           </p>
-          <h1 className="mt-4 font-display text-5xl font-semibold leading-[1.05] text-olive md:text-7xl">
+          <h1 className="mt-4 font-display text-4xl font-semibold leading-[1.08] text-olive sm:text-5xl md:text-7xl">
             {site.tagline}
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft md:text-xl">
-            A twelve-chapter course — plus timeline, words, and sources —
-            on how people in Jesus’s world explained illness, mixed herbs,
-            opened veins, set bones, washed for purity, and prayed for
-            healing.
-          </p>
           <p className="mt-4 font-sans text-sm uppercase tracking-[0.22em] text-terracotta">
             {site.years}
           </p>
-          <div className="mt-8">
-            <Ornament />
-          </div>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
             <Link
               href="/introduction"
-              className="rounded-sm bg-olive px-6 py-3 font-sans text-sm uppercase tracking-[0.16em] text-cream hover:bg-wine"
+              className="rounded-sm bg-grove px-6 py-3 text-center font-sans text-sm uppercase tracking-[0.16em] text-foam hover:bg-wine"
             >
               Begin with the world
             </Link>
             <Link
               href="/herbs"
-              className="rounded-sm border border-olive px-6 py-3 font-sans text-sm uppercase tracking-[0.16em] text-olive hover:border-terracotta hover:text-terracotta"
+              className="rounded-sm border border-olive px-6 py-3 text-center font-sans text-sm uppercase tracking-[0.16em] text-olive hover:border-terracotta hover:text-terracotta"
             >
               Open the herbal
             </Link>
+          </div>
+          <p className="mx-auto mt-8 max-w-2xl text-base leading-relaxed text-ink-soft sm:mt-10 sm:text-lg md:text-xl">
+            A twelve-chapter course — plus timeline, words, and sources —
+            on how people in Jesus’s world explained illness, mixed herbs,
+            opened veins, set bones, washed for purity, and prayed for
+            healing.
+          </p>
+          <div className="mt-8">
+            <Ornament />
           </div>
         </div>
       </section>
@@ -75,7 +84,7 @@ export default function Home() {
               <p className="font-sans text-[10px] uppercase tracking-[0.24em] text-gold">
                 {chapter.number} · {chapter.group}
               </p>
-              <h2 className="mt-2 font-display text-2xl text-olive group-hover:text-terracotta">
+              <h2 className="mt-2 font-display text-xl text-olive group-hover:text-terracotta sm:text-2xl">
                 {chapter.nav}
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">
@@ -92,13 +101,13 @@ export default function Home() {
             <Link
               key={chapter.slug}
               href={chapter.href}
-              className="border border-olive/20 bg-olive px-5 py-6 text-cream"
+              className="border border-olive/20 bg-grove px-5 py-6 text-foam"
             >
               <p className="font-sans text-[10px] uppercase tracking-[0.24em] text-gold">
                 {chapter.nav}
               </p>
-              <p className="mt-2 font-display text-2xl">{chapter.title}</p>
-              <p className="mt-2 text-sm text-parchment">{chapter.summary}</p>
+              <p className="mt-2 font-display text-xl sm:text-2xl">{chapter.title}</p>
+              <p className="mt-2 text-sm text-foam/80">{chapter.summary}</p>
             </Link>
           ))}
         </div>

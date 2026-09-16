@@ -6,7 +6,7 @@ export function Article({ slug, children }) {
       <PageHeader slug={slug} />
       <article
         id="content"
-        className="prose-page mx-auto max-w-3xl px-4 pb-4 md:px-6"
+        className="prose-page mx-auto w-full min-w-0 max-w-3xl px-4 pb-4 md:px-6"
       >
         {children}
       </article>

@@ -1,11 +1,13 @@
 import { Article } from "@/components/Article";
 import Quote, { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Food as Medicine",
   description:
-    "Wine, honey, grains, fasting, and humoral diet in the first century.",
-};
+    "Wine, honey, grains, and fasting as treatment: humoral diet in the first-century Mediterranean kitchen and clinic.",
+  path: "/food",
+});
 
 export default function Page() {
   return (

@@ -1,11 +1,13 @@
 import { Article } from "@/components/Article";
 import Quote, { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Water, Heat, and Cold",
   description:
-    "Roman baths, Jewish ritual washing, and prescribed hot and cold therapy.",
-};
+    "Roman baths, Jewish ritual washing, and prescribed heat and cold in first-century therapy — from the frigidarium to the mikveh.",
+  path: "/bathing",
+});
 
 export default function Page() {
   return (
@@ -35,20 +37,20 @@ export default function Page() {
         joint pain and worry, a warm room is still a treatment.
       </p>
 
-      <div className="my-8 grid grid-cols-3 border border-sand text-center font-sans text-xs uppercase tracking-[0.14em]">
-        <div className="bg-[#d7e3ea] px-2 py-6 text-olive">
+      <div className="my-8 grid grid-cols-1 overflow-hidden border border-sand text-center font-sans text-xs uppercase tracking-wide sm:grid-cols-3 sm:tracking-[0.14em]">
+        <div className="bath-cold border-b border-sand px-3 py-5 text-olive sm:border-b-0 sm:px-2 sm:py-6">
           Frigidarium
           <span className="mt-2 block font-serif text-sm normal-case tracking-normal text-ink-soft">
             Cold plunge
           </span>
         </div>
-        <div className="bg-parchment px-2 py-6 text-olive">
+        <div className="bath-warm border-b border-sand px-3 py-5 text-olive sm:border-b-0 sm:px-2 sm:py-6">
           Tepidarium
           <span className="mt-2 block font-serif text-sm normal-case tracking-normal text-ink-soft">
             Warm rest
           </span>
         </div>
-        <div className="bg-[#e8c4a8] px-2 py-6 text-olive">
+        <div className="bath-hot px-3 py-5 text-olive sm:px-2 sm:py-6">
           Caldarium
           <span className="mt-2 block font-serif text-sm normal-case tracking-normal text-ink-soft">
             Hot room

@@ -15,22 +15,22 @@ export default function HumorDiagram() {
             key={humor.id}
             type="button"
             onClick={() => setActive(humor.id)}
-            className={`min-h-28 px-4 py-5 text-left transition ${
-              active === humor.id ? "text-cream" : "text-cream/80"
+            className={`min-h-24 px-3 py-4 text-left transition sm:min-h-28 sm:px-4 sm:py-5 ${
+              active === humor.id ? "text-foam" : "text-foam/80"
             }`}
             style={{ background: humor.color }}
             aria-pressed={active === humor.id}
           >
-            <span className="block font-sans text-[10px] uppercase tracking-[0.2em] opacity-80">
+            <span className="block font-sans text-[10px] uppercase tracking-[0.12em] opacity-80 sm:tracking-[0.2em]">
               {humor.qualities.join(" · ")}
             </span>
-            <span className="block font-display text-2xl">{humor.name}</span>
+            <span className="block font-display text-xl sm:text-2xl">{humor.name}</span>
             <span className="block font-sans text-xs">{humor.temperament}</span>
           </button>
         ))}
       </div>
-      <div className="border border-t-0 border-sand bg-parchment/60 px-5 py-5">
-        <p className="font-display text-2xl text-olive">
+      <div className="border border-t-0 border-sand bg-parchment/60 px-4 py-5 sm:px-5">
+        <p className="font-display text-xl text-olive sm:text-2xl">
           {selected.name}{" "}
           <span className="text-lg italic text-ink-soft">({selected.greek})</span>
         </p>

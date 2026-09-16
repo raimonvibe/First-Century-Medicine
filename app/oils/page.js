@@ -1,11 +1,13 @@
 import { Article } from "@/components/Article";
 import Quote, { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Oils, Salves, and Poultices",
   description:
-    "Olive oil, aromatic resins, mustard plasters, and anointing in first-century care.",
-};
+    "Olive oil, aromatic resins, mustard plasters, and anointing — how first-century medicine entered the skin and the rite.",
+  path: "/oils",
+});
 
 export default function Page() {
   return (

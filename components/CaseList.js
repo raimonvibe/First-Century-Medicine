@@ -14,22 +14,22 @@ export default function CaseList() {
           <article key={item.id} className="border border-sand bg-cream">
             <button
               type="button"
-              className="flex w-full items-baseline justify-between gap-4 px-4 py-4 text-left"
+              className="flex w-full items-baseline justify-between gap-3 px-3 py-4 text-left sm:gap-4 sm:px-4"
               onClick={() => setOpenId(open ? "" : item.id)}
               aria-expanded={open}
             >
-              <span className="block">
+              <span className="block min-w-0">
                 <span className="block font-sans text-[10px] uppercase tracking-[0.22em] text-gold">
                   Case {item.number}
                 </span>
-                <span className="block font-display text-2xl text-olive md:text-3xl">
+                <span className="block font-display text-xl text-olive md:text-3xl sm:text-2xl">
                   {item.title}
                 </span>
                 <span className="mt-1 block text-sm text-ink-soft">
                   {item.patient}
                 </span>
               </span>
-              <span className="font-sans text-gold">{open ? "–" : "+"}</span>
+              <span className="shrink-0 font-sans text-gold">{open ? "–" : "+"}</span>
             </button>
             {open ? (
               <div className="space-y-4 border-t border-sand px-4 py-5 text-[0.98rem] leading-relaxed">

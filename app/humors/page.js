@@ -1,12 +1,14 @@
 import { Article } from "@/components/Article";
 import HumorDiagram from "@/components/HumorDiagram";
 import Quote, { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "The Four Humors",
   description:
-    "Blood, phlegm, yellow bile, and black bile as the medical theory of the first century.",
-};
+    "Blood, phlegm, yellow bile, and black bile: the four-humor theory first-century physicians used to explain health and disease.",
+  path: "/humors",
+});
 
 export default function Page() {
   return (

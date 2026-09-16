@@ -1,11 +1,13 @@
 import { Article } from "@/components/Article";
 import Quote, { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Healing in Judea",
   description:
-    "Balsam, the mikveh, Levitical isolation, and Judea’s place in first-century pharmacy.",
-};
+    "Balsam gardens, Dead Sea bitumen, the mikveh, and Levitical purity laws made first-century Judea a distinctive medical landscape.",
+  path: "/judea",
+});
 
 export default function Page() {
   return (

@@ -1,11 +1,13 @@
 import { Article } from "@/components/Article";
 import Quote, { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Faith, Prayer, and Healing",
   description:
-    "Priests, physicians, Jesus’s healings, and how first-century people held body and spirit together.",
-};
+    "Priests, physicians, and prayer together: how first-century people held body, community, and the divine in the same illness.",
+  path: "/spiritual",
+});
 
 export default function Page() {
   return (

@@ -1,11 +1,13 @@
 import { Article } from "@/components/Article";
 import Quote, { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Surgery and Wound Care",
   description:
-    "Celsus on inflammation, ligature, bone-setting, cautery, and the limits of first-century surgery.",
-};
+    "Celsus on inflammation, ligature, bone-setting, and cautery — what first-century surgery could do, and what it could not.",
+  path: "/surgery",
+});
 
 export default function Page() {
   return (

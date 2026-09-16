@@ -1,12 +1,14 @@
 import { Article } from "@/components/Article";
 import { sources } from "@/lib/sources";
 import { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Sources and Further Reading",
   description:
-    "Ancient texts and modern scholarship behind this educational site.",
-};
+    "Ancient texts and modern scholarship behind this educational history of first-century medicine. Not a treatment guide.",
+  path: "/sources",
+});
 
 export default function Page() {
   return (

@@ -1,12 +1,14 @@
 import { Article } from "@/components/Article";
 import HerbExplorer from "@/components/HerbExplorer";
 import Quote, { Callout } from "@/components/Quote";
+import { pageMeta } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = pageMeta({
   title: "Herbs and Plant Medicines",
   description:
-    "Interactive materia medica of the first century: balsam, myrrh, hyssop, fig, and more.",
-};
+    "Explore balsam, myrrh, hyssop, fig, and other first-century plant medicines. An educational materia medica, not a dispensary.",
+  path: "/herbs",
+});
 
 export default function Page() {
   return (

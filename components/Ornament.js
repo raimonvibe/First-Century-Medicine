@@ -33,17 +33,17 @@ export function OliveMark({ className = "h-9 w-9" }) {
       fill="none"
       aria-hidden="true"
     >
-      <circle cx="24" cy="24" r="23" stroke="#b8963e" strokeWidth="1.2" />
+      <circle cx="24" cy="24" r="23" stroke="var(--gold)" strokeWidth="1.2" />
       <path
         d="M24 38c8-6 14-14 14-22-8 2-12 8-14 22Z"
-        fill="#3a452c"
+        fill="var(--olive)"
       />
       <path
         d="M24 38c-8-6-14-14-14-22 8 2 12 8 14 22Z"
-        fill="#5b6a43"
+        fill="var(--olive-mid)"
       />
-      <path d="M24 10v28" stroke="#b8963e" strokeWidth="1.4" />
-      <circle cx="24" cy="12" r="2.2" fill="#b85c38" />
+      <path d="M24 10v28" stroke="var(--gold)" strokeWidth="1.4" />
+      <circle cx="24" cy="12" r="2.2" fill="var(--terracotta)" />
     </svg>
   );
 }
