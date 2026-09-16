@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-display: var(--font-display-family), "Palatino Linotype", serif;
+  --font-serif: var(--font-serif-family), "Times New Roman", serif;
+  --font-sans: var(--font-sans-family), system-ui, sans-serif;
+  --color-cream: #fbf6ea;
+  --color-parchment: #f3e6c9;
+  --color-parchment-deep: #e4d2a8;
+  --color-ink: #241c14;
+  --color-ink-soft: #5a4f42;
+  --color-olive: #3a452c;
+  --color-olive-mid: #5b6a43;
+  --color-sage: #8b9a72;
+  --color-terracotta: #b85c38;
+  --color-gold: #b8963e;
+  --color-wine: #6e2e2b;
+  --color-sand: #d7c4a0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-serif), "Times New Roman", serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-gold) 45%, transparent);
+  color: var(--color-ink);
+}
+
+.paper-bg {
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 10% -10%, color-mix(in srgb, var(--color-terracotta) 12%, transparent), transparent),
+    radial-gradient(ellipse 70% 40% at 100% 0%, color-mix(in srgb, var(--color-olive) 10%, transparent), transparent),
+    radial-gradient(ellipse 60% 50% at 80% 100%, color-mix(in srgb, var(--color-gold) 10%, transparent), transparent);
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.ornament-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold) 20%,
+    var(--color-terracotta) 50%,
+    var(--color-gold) 80%,
+    transparent
+  );
+}
+
+.prose-page p {
+  margin-bottom: 1.1rem;
+}
+
+.prose-page h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 600;
+  font-size: 1.85rem;
+  line-height: 1.2;
+  color: var(--color-olive);
+  margin: 2.4rem 0 0.85rem;
+}
+
+.prose-page h3 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-wine);
+  margin: 1.7rem 0 0.55rem;
+}
+
+.prose-page ul {
+  margin: 0.4rem 0 1.2rem;
+  padding-left: 1.15rem;
+}
+
+.prose-page li {
+  margin-bottom: 0.45rem;
+  padding-left: 0.25rem;
+  list-style: none;
+  position: relative;
+}
+
+.prose-page li::before {
+  content: "❧";
+  position: absolute;
+  left: -1.1rem;
+  color: var(--color-terracotta);
+  font-size: 0.75rem;
+  top: 0.2rem;
+}
