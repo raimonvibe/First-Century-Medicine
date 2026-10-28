@@ -15,6 +15,7 @@ import {
   primeSpeechEngine,
   translateChunk,
 } from "@/lib/speech";
+import { genuineVoices } from "./noveltyVoices";
 
 const SPEECH_OPEN_KEY = "fcm-speech-open";
 
@@ -238,7 +239,8 @@ export default function SpeechReader() {
       return;
     }
     const loadVoices = () => {
-      const list = window.speechSynthesis.getVoices();
+      // Novelty voices (Bubbles, Junior…) never reach the picker or the default.
+      const list = genuineVoices(window.speechSynthesis.getVoices());
       voicesRef.current = list;
       setLanguages(offeredLanguages(list));
     };
