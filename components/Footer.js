@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { chapters, site } from "@/lib/chapters";
 import { OliveMark, Ornament } from "@/components/Ornament";
+import SocialIcons from "@/components/SocialIcons";
 
 export default function Footer() {
   return (
@@ -21,6 +22,12 @@ export default function Footer() {
             practices. They are not medical advice, and none of the treatments
             should be tried.
           </p>
+        </div>
+        <div className="mt-8">
+          <p className="mb-3 font-sans text-xs uppercase tracking-[0.2em] text-sage">
+            Connect with Raimon
+          </p>
+          <SocialIcons />
         </div>
         <div className="my-8">
           <Ornament className="text-gold/70" />
