@@ -6,9 +6,8 @@
  * into the 512-unit em box. Inlined rather than loading Font Awesome: its
  * stylesheet and webfonts weigh ~370 KB for nine icons.
  *
- * Each icon sits on a round foam tile (see .social-tile in globals.css): the
- * footer is dark olive in both themes, where black and blue brand marks would
- * vanish, and on foam every brand colour keeps its contrast.
+ * Bare icons on the dark olive footer; marks that are black or dark blue in
+ * their brand colours use the light, reversed version (see globals.css).
  */
 const ICONS = {
   globe: { width: 512, d: "M352 256Q352 289 349 320H163Q160 289 160 256Q160 223 163 192H349Q352 223 352 256ZM381 192H504H381H504Q512 223 512 256Q512 289 504 320H381Q384 289 384 256Q384 223 381 192ZM493 160H377H493H377Q361 62 321 8Q381 25 426 64Q470 104 493 160ZM344 160H168H344H168Q177 105 195 65Q211 30 228 14Q245 -1 256 0Q267 -1 284 14Q301 30 317 65Q335 105 344 160ZM135 160H19H135H19Q42 104 86 64Q131 25 191 8Q151 62 135 160ZM8 192H131H8H131Q128 223 128 256Q128 289 131 320H8Q0 289 0 256Q0 223 8 192ZM195 447Q177 407 168 352H344Q335 407 317 447Q301 482 284 498Q267 513 256 512Q245 513 228 498Q211 482 195 447ZM135 352Q151 450 191 504Q131 487 86 448Q42 408 19 352H135ZM493 352Q470 408 426 448Q381 487 322 504Q361 450 377 352H493Z" },
@@ -34,7 +33,7 @@ export const SOCIAL_LINKS = [
   { href: "https://www.facebook.com/profile.php?id=61563450007849", label: "Facebook", icon: "facebook" },
 ];
 
-const ICON_REM = 1.15;
+const ICON_REM = 1.35;
 
 function Icon({ name }) {
   const { width, d } = ICONS[name];

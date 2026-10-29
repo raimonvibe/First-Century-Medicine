@@ -416,9 +416,9 @@ html[data-theme="dark"] .bath-hot {
 }
 
 /* Social icons in the footer (components/SocialIcons.js), brand colours after
-   the Amsterdam Metro site. The footer is dark olive (--grove) in both themes,
-   where black and blue marks would vanish, so each icon sits on a round foam
-   tile: every brand colour keeps its contrast in light and in dark. */
+   the Amsterdam Metro site. Bare glyphs, no tile: the footer is dark olive
+   (--grove) in both themes, so the black marks (X, GitHub, Medium, TikTok) and
+   LinkedIn's dark blue use their brands' reversed, light versions in foam. */
 .social-icons {
   display: flex;
   flex-wrap: wrap;
@@ -436,14 +436,11 @@ html[data-theme="dark"] .bath-hot {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 9999px;
-  background: var(--foam);
-  box-shadow: 0 0 0 1px color-mix(in oklab, var(--gold) 45%, transparent);
-  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  transition: transform 0.15s ease;
 }
 
 .social-tile:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 0 2px var(--gold);
 }
 
 .social-tile:focus-visible {
@@ -456,8 +453,13 @@ html[data-theme="dark"] .bath-hot {
   fill: currentColor;
 }
 
-.social-globe {
-  fill: var(--grove);
+.social-globe,
+.social-x,
+.social-github,
+.social-medium,
+.social-linkedin,
+.social-tiktok {
+  fill: var(--foam);
 }
 
 .social-youtube {
@@ -466,17 +468,6 @@ html[data-theme="dark"] .bath-hot {
 
 .social-facebook {
   fill: #1877f2;
-}
-
-.social-linkedin {
-  fill: #0a66c2;
-}
-
-.social-x,
-.social-github,
-.social-medium,
-.social-tiktok {
-  fill: #000;
 }
 
 .social-tiktok .tiktok-cyan {
@@ -502,11 +493,6 @@ html[data-theme="dark"] .bath-hot {
 
 /* Windows High Contrast: one system colour, no gradient or offset copies. */
 @media (forced-colors: active) {
-  .social-tile {
-    background: Canvas;
-    box-shadow: none;
-    border: 1px solid CanvasText;
-  }
   .social-svg,
   .social-svg path {
     fill: CanvasText !important;
