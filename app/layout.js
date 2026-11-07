@@ -105,6 +105,7 @@ export default function RootLayout({ children }) {
       className={`${display.variable} ${serif.variable} ${sans.variable} h-full antialiased`}
     >
       <head>
+        {/* eslint-disable-next-line @next/next/no-sync-scripts -- must run before first paint so the saved theme applies without a flash */}
         <script src="/theme-init.js" />
         <script
           type="application/ld+json"
