@@ -4,7 +4,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+import { MapContainer, Marker, Popup, TileLayer, useMap, useMapEvents } from "react-leaflet";
 
 // Free tile sources, no API key needed.
 // DARE: Digital Atlas of the Roman Empire, Johan Åhlfeldt, hosted by the
@@ -26,10 +26,35 @@ const BASES = {
 
 const BOUNDS_PADDING = [24, 24];
 
-function olivePin(selected) {
+function boundsOf(places) {
+  return L.latLngBounds(places.map((place) => [place.lat, place.lng]));
+}
+
+function prefersReducedMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+// Show every given place (or all places when the filter is empty).
+export function fitPlaces(map, places, { animate = true } = {}) {
+  if (!map || places.length === 0) return;
+  map.closePopup();
+  map.fitBounds(boundsOf(places), {
+    padding: BOUNDS_PADDING,
+    maxZoom: 8,
+    animate: animate && !prefersReducedMotion(),
+  });
+}
+
+function escapeHtml(text) {
+  return text.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+}
+
+// The label lives inside the icon so it survives Leaflet swapping the icon
+// element when a pin is selected.
+function olivePin(selected, label) {
   return L.divIcon({
     className: `fcm-pin${selected ? " is-selected" : ""}`,
-    html: `<svg viewBox="0 0 30 40" width="30" height="40" aria-hidden="true" focusable="false">
+    html: `<span class="sr-only">${escapeHtml(label)}</span><svg viewBox="0 0 30 40" width="30" height="40" aria-hidden="true" focusable="false">
       <path class="fcm-pin-body" d="M15 1.5C7.5 1.5 1.5 7.4 1.5 14.8c0 9.6 11.6 22 12.5 23a1.4 1.4 0 0 0 2 0c.9-1 12.5-13.4 12.5-23C28.5 7.4 22.5 1.5 15 1.5Z"/>
       <path class="fcm-pin-leaf" d="M15 22c3.6-2.7 6-6.2 6-10-3.6.9-5.4 3.6-6 10Zm0 0c-3.6-2.7-6-6.2-6-10 3.6.9 5.4 3.6 6 10Z"/>
     </svg>`,
@@ -60,8 +85,18 @@ function MapController({ places, focus, markers, onReady }) {
   useEffect(() => {
     if (places.length === 0) return;
     const container = map.getContainer();
-    const bounds = L.latLngBounds(places.map((place) => [place.lat, place.lng]));
-    const fit = () => map.fitBounds(bounds, { padding: BOUNDS_PADDING, animate: false });
+    const bounds = boundsOf(places);
+    // Pinching or panning can never lose the region: the map stays within
+    // a margin around all places and can't zoom out much past them.
+    map.setMaxBounds(bounds.pad(0.6));
+    const limitZoom = () => {
+      const fitZoom = map.getBoundsZoom(bounds, false, L.point(48, 48));
+      map.setMinZoom(Math.max(2, fitZoom - 1));
+    };
+    const fit = () => {
+      limitZoom();
+      map.fitBounds(bounds, { padding: BOUNDS_PADDING, animate: false });
+    };
     const touched = () => {
       fitted.current = true;
     };
@@ -72,6 +107,7 @@ function MapController({ places, focus, markers, onReady }) {
     fit();
     const observer = new ResizeObserver(() => {
       map.invalidateSize({ pan: false });
+      limitZoom();
       if (!fitted.current) fit();
     });
     observer.observe(container);
@@ -86,7 +122,7 @@ function MapController({ places, focus, markers, onReady }) {
     const marker = markers.current.get(focus.id);
     if (!marker) return;
     fitted.current = true;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reduce = prefersReducedMotion();
     const target = marker.getLatLng();
     const zoom = marker.options.flyZoom || 7;
     const open = () => marker.openPopup();
@@ -99,6 +135,40 @@ function MapController({ places, focus, markers, onReady }) {
     }
     return () => map.off("moveend", open);
   }, [focus, map, markers]);
+
+  return null;
+}
+
+// Reports how many of the shown places are on screen, and whether the
+// selected one is, so the page can offer a way back.
+function ViewWatcher({ places, selectedId, onChange }) {
+  const map = useMap();
+  const report = () => {
+    const view = map.getBounds();
+    const inView = places.filter((place) => view.contains([place.lat, place.lng])).length;
+    const selected = places.find((place) => place.id === selectedId);
+    onChange({
+      inView,
+      selectedOut: selected && !view.contains([selected.lat, selected.lng]) ? selected : null,
+    });
+  };
+  useMapEvents({ moveend: report, zoomend: report, resize: report });
+
+  // A filter change that leaves nothing on screen: show the new set.
+  const first = useRef(true);
+  useEffect(() => {
+    if (first.current) {
+      first.current = false;
+      return;
+    }
+    const view = map.getBounds();
+    if (places.length && !places.some((place) => view.contains([place.lat, place.lng]))) {
+      fitPlaces(map, places);
+    } else {
+      report();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- report reads the latest props
+  }, [map, places, selectedId]);
 
   return null;
 }
@@ -136,6 +206,7 @@ export default function PlacesLeaflet({
     () => window.matchMedia("(pointer: coarse)").matches,
   );
   const [hint, setHint] = useState(false);
+  const [view, setView] = useState({ inView: 1, selectedOut: null });
   const tileStats = useRef({ loaded: 0, failed: 0 });
 
   // Touch: one finger scrolls the page, two fingers pan and zoom the map
@@ -195,7 +266,8 @@ export default function PlacesLeaflet({
         minZoom={3}
         maxZoom={13}
         scrollWheelZoom={false}
-        worldCopyJump
+        maxBoundsViscosity={0.9}
+        bounceAtZoomLimits={false}
         className="h-full w-full"
         aria-label="Map of places in first-century medicine"
         keyboard
@@ -218,24 +290,22 @@ export default function PlacesLeaflet({
           }}
         />
         <WheelGuard />
+        <ViewWatcher places={places} selectedId={selectedId} onChange={setView} />
         {allPlaces.map((place) =>
           visible.has(place.id) ? (
             <Marker
               key={place.id}
               position={[place.lat, place.lng]}
-              icon={olivePin(place.id === selectedId)}
+              icon={olivePin(
+                place.id === selectedId,
+                `${place.name}, ${place.region}${place.id === selectedId ? ", selected" : ""}. Press Enter for details.`,
+              )}
               title={place.name}
               flyZoom={place.zoom}
               keyboard
               ref={(marker) => {
                 if (marker) {
                   markers.current.set(place.id, marker);
-                  marker
-                    .getElement()
-                    ?.setAttribute(
-                      "aria-label",
-                      `${place.name}, ${place.region}. Press Enter for details.`,
-                    );
                 } else {
                   markers.current.delete(place.id);
                 }
@@ -245,7 +315,7 @@ export default function PlacesLeaflet({
                 popupopen: () => onSelect(place.id),
               }}
             >
-              <Popup maxWidth={maxWidth} minWidth={Math.min(220, maxWidth)} autoPanPaddingTopLeft={[60, 16]}
+              <Popup maxWidth={maxWidth} minWidth={Math.min(220, maxWidth)} autoPanPaddingTopLeft={[60, 64]}
                 autoPanPaddingBottomRight={[16, 16]}>
                 <div className="fcm-popup">
                   <p className="fcm-popup-kicker">{place.region}</p>
@@ -262,6 +332,44 @@ export default function PlacesLeaflet({
           ) : null,
         )}
       </MapContainer>
+      <button
+        type="button"
+        className="fcm-map-reset"
+        onClick={() => fitPlaces(mapRef.current, places.length ? places : allPlaces)}
+        aria-label="Show all places on the map"
+        title="Show all places"
+      >
+        <svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" focusable="false">
+          <path d="M3 7.5V3h4.5M12.5 3H17v4.5M17 12.5V17h-4.5M7.5 17H3v-4.5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          <circle cx="10" cy="10" r="2.2" fill="currentColor" />
+        </svg>
+        <span className="fcm-map-reset-label">Show all</span>
+      </button>
+      {places.length > 0 && view.inView === 0 ? (
+        <div className="fcm-map-lost" role="status">
+          <span>No places in view.</span>
+          <button type="button" onClick={() => fitPlaces(mapRef.current, places)}>
+            Show all places
+          </button>
+        </div>
+      ) : view.selectedOut ? (
+        <div className="fcm-map-lost" role="status">
+          <button
+            type="button"
+            onClick={() => {
+              const marker = markers.current.get(view.selectedOut.id);
+              const map = mapRef.current;
+              if (!marker || !map) return;
+              map.setView(marker.getLatLng(), Math.max(map.getZoom(), view.selectedOut.zoom || 7), {
+                animate: !prefersReducedMotion(),
+              });
+              marker.openPopup();
+            }}
+          >
+            Back to {view.selectedOut.name}
+          </button>
+        </div>
+      ) : null}
       {touch ? (
         <p
           className={`fcm-map-hint ${hint ? "is-visible" : ""}`}
