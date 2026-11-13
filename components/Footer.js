@@ -42,6 +42,9 @@ export default function Footer() {
               {chapter.nav}
             </Link>
           ))}
+          <Link href="/map" className="font-sans text-sm text-sage hover:text-foam">
+            Map
+          </Link>
         </div>
       </div>
     </footer>
