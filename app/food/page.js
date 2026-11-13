@@ -21,7 +21,7 @@ export default function Page() {
         wine for the stomach, honey for the throat, garlic for the chest.
       </p>
 
-      <h2>Jewish diet as an accidental shield</h2>
+      <h2 id="jewish-diet-as-an-accidental-shield">Jewish diet as an accidental shield</h2>
       <p>
         Torah’s food laws are about holiness, not germ theory. They
         nevertheless reduced some risks. Avoiding pork lowered exposure to
@@ -36,7 +36,7 @@ export default function Page() {
         your stomach and your frequent ailments.
       </Quote>
 
-      <h2>The pantry as pharmacy</h2>
+      <h2 id="the-pantry-as-pharmacy">The pantry as pharmacy</h2>
       <h3>Wine</h3>
       <p>
         The default drug. Warm and moist in humoral tables; a digestive;
@@ -74,7 +74,7 @@ export default function Page() {
         winter heat for those who could pay.
       </p>
 
-      <h2>Matching the dish to the diagnosis</h2>
+      <h2 id="matching-the-dish-to-the-diagnosis">Matching the dish to the diagnosis</h2>
       <ul>
         <li>Hot diseases: fruit, light grain, less wine, cool rooms.</li>
         <li>Cold diseases: spices, broths, oil, diluted wine, motion.</li>

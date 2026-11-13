@@ -1,6 +1,11 @@
 import PageHeader, { ChapterNav } from "@/components/PageHeader";
+import ChapterQuiz from "@/components/ChapterQuiz";
+import { getNextQuiz, getQuiz } from "@/lib/quizzes";
 
 export function Article({ slug, children }) {
+  const quiz = getQuiz(slug);
+  const next = quiz ? getNextQuiz(slug) : null;
+
   return (
     <>
       <PageHeader slug={slug} />
@@ -10,6 +15,12 @@ export function Article({ slug, children }) {
       >
         {children}
       </article>
+      {quiz ? (
+        <ChapterQuiz
+          quiz={quiz}
+          next={next ? { href: next.href, nav: next.nav } : null}
+        />
+      ) : null}
       <ChapterNav slug={slug} />
     </>
   );

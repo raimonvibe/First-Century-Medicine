@@ -31,7 +31,7 @@ export default function Page() {
         had.
       </p>
 
-      <h2>Three inheritances</h2>
+      <h2 id="three-inheritances">Three inheritances</h2>
       <p>
         <strong>Greek thought</strong> supplied the prestige language.
         Physicians claimed descent from Hippocrates of Kos (fifth–fourth
@@ -64,7 +64,7 @@ export default function Page() {
         worse. None of these scenes assume that medicine is a pagan hobby.
       </Quote>
 
-      <h2>Who treated the sick?</h2>
+      <h2 id="who-treated-the-sick">Who treated the sick?</h2>
       <ul>
         <li>
           Elite Greek or Greek-trained physicians, often slaves or freedmen
@@ -89,7 +89,7 @@ export default function Page() {
         </li>
       </ul>
 
-      <h2>What they could and could not do</h2>
+      <h2 id="what-they-could-and-could-not-do">What they could and could not do</h2>
       <p>
         They could reduce a fever with water, drain an abscess, splint a
         limb, soothe a cough with honey, and — sometimes — keep a wound

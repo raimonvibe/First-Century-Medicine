@@ -1,0 +1,71 @@
+{
+  "chapter": "spiritual",
+  "number": "11",
+  "questions": [
+    {
+      "id": "spiritual-1",
+      "question": "In Sirach 38, what is the order when you are ill?",
+      "options": [
+        "Pray to the Lord, then give physicians their place",
+        "See a physician first and pray only if that fails",
+        "Avoid physicians and pray alone",
+        "Go to the priest, then to the baths"
+      ],
+      "answer": 0,
+      "explanation": "Sirach 38 says: do not delay, pray to the Lord, then give physicians their place, for recovery may lie in their hands.",
+      "link": "/spiritual"
+    },
+    {
+      "id": "spiritual-2",
+      "question": "What do the Gospels say the hemorrhaging woman had done before meeting Jesus (Mark 5:26)?",
+      "options": [
+        "Lived in the Temple",
+        "Bathed in the Dead Sea",
+        "Refused all medicine",
+        "Spent her living on physicians"
+      ],
+      "answer": 3,
+      "explanation": "She had spent her living on physicians. The texts assume ordinary medicine exists; the point is that her hemorrhage ends when others could not end it.",
+      "link": "/spiritual#jesuss-healings-in-that-world"
+    },
+    {
+      "id": "spiritual-3",
+      "question": "Which practices does James 5:14–15 bring together?",
+      "options": [
+        "Fasting, bathing, and bleeding",
+        "Elders, prayer, oil, and confession",
+        "Herbs, surgery, and amulets",
+        "Wine, honey, and bread"
+      ],
+      "answer": 1,
+      "explanation": "James 5:14–15 joins elders, prayer, oil, and confession: body and fellowship in one visit.",
+      "link": "/spiritual#early-christian-combination"
+    },
+    {
+      "id": "spiritual-4",
+      "question": "What does 1 Corinthians 6:19 call the body?",
+      "options": [
+        "A prison",
+        "A garden",
+        "A temple",
+        "A machine"
+      ],
+      "answer": 2,
+      "explanation": "The body as a temple cuts against both neglect and gluttony.",
+      "link": "/spiritual#early-christian-combination"
+    },
+    {
+      "id": "spiritual-5",
+      "question": "Which four layers of care does the chapter describe?",
+      "options": [
+        "Physical treatment, spiritual treatment, practical nursing, and community",
+        "Blood, phlegm, yellow bile, and black bile",
+        "Diagnosis, surgery, amputation, and burial",
+        "Greek, Roman, Egyptian, and Persian medicine"
+      ],
+      "answer": 0,
+      "explanation": "Herbs, diet, and the knife; prayer and ritual; rest, washing, and food; family, alms, and not leaving the melancholic alone.",
+      "link": "/spiritual#demons-and-other-causes"
+    }
+  ]
+}

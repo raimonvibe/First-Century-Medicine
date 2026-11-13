@@ -1,0 +1,71 @@
+{
+  "chapter": "food",
+  "number": "09",
+  "questions": [
+    {
+      "id": "food-1",
+      "question": "In learned medicine, what was the first prescription?",
+      "options": [
+        "Bloodletting",
+        "Surgery",
+        "Regimen: food, wine, exercise, and sleep",
+        "Amulets"
+      ],
+      "answer": 2,
+      "explanation": "Regimen (food, wine, exercise, sleep) came first. Celsus spends book after book on what to eat.",
+      "link": "/food"
+    },
+    {
+      "id": "food-2",
+      "question": "What does 1 Timothy 5:23 advise?",
+      "options": [
+        "Fast for forty days",
+        "Take a little wine for the sake of your stomach",
+        "Avoid honey when ill",
+        "Eat only bread and water"
+      ],
+      "answer": 1,
+      "explanation": "“Take a little wine for the sake of your stomach and your frequent ailments.” “A little” is the ethical dose.",
+      "link": "/food#jewish-diet-as-an-accidental-shield"
+    },
+    {
+      "id": "food-3",
+      "question": "How does the chapter describe honey?",
+      "options": [
+        "Calories, cough syrup, and the best topical antiseptic they owned",
+        "A cheap food for the poor only",
+        "A cooling food for fevers",
+        "A poison to be avoided"
+      ],
+      "answer": 0,
+      "explanation": "Honey was calories, cough syrup, and the best topical antiseptic they owned. It was costly and mixed into bitter roots.",
+      "link": "/food#the-pantry-as-pharmacy"
+    },
+    {
+      "id": "food-4",
+      "question": "How was fruit such as grapes, figs, and pomegranates generally classed?",
+      "options": [
+        "Warming and drying, good for phlegm",
+        "Hot and dangerous in fever",
+        "Only fit for animals",
+        "Cooling and moistening, hence fever food"
+      ],
+      "answer": 3,
+      "explanation": "Fruit was generally cooling and moistening, hence fever food. Legumes, by contrast, were warming and drying.",
+      "link": "/food#the-pantry-as-pharmacy"
+    },
+    {
+      "id": "food-5",
+      "question": "What kind of meal matched a “hot” disease?",
+      "options": [
+        "Spices, broths, oil, and diluted wine",
+        "Fruit, light grain, less wine, and cool rooms",
+        "Heavy meat and strong wine",
+        "Nothing at all until the fever broke"
+      ],
+      "answer": 1,
+      "explanation": "Hot diseases got fruit, light grain, less wine, and cool rooms. Cold diseases got spices, broths, oil, diluted wine, and motion.",
+      "link": "/food#matching-the-dish-to-the-diagnosis"
+    }
+  ]
+}

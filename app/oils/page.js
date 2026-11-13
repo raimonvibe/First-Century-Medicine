@@ -21,7 +21,7 @@ export default function Page() {
         and to purify.
       </p>
 
-      <h2>Anointing as more than metaphor</h2>
+      <h2 id="anointing-as-more-than-metaphor">Anointing as more than metaphor</h2>
       <p>
         To pour oil is to honor, to consecrate, and to treat. Kings are
         anointed; so are the sick. James 5:14 tells the church to call
@@ -35,7 +35,7 @@ export default function Page() {
         He went to him and bound up his wounds, pouring on oil and wine.
       </Quote>
 
-      <h2>How a salve was built</h2>
+      <h2 id="how-a-salve-was-built">How a salve was built</h2>
       <ul>
         <li>Oil — usually olive; sometimes other pressed fruits.</li>
         <li>Herb juices or powdered leaves, strained or mashed in.</li>
@@ -50,7 +50,7 @@ export default function Page() {
         and eased a joint.
       </p>
 
-      <h2>Poultices and plasters</h2>
+      <h2 id="poultices-and-plasters">Poultices and plasters</h2>
       <p>
         A poultice is a wet mash bound on with cloth. Hezekiah’s fig
         plaster (2 Kings 20:7) is the biblical type. Mustard plasters

@@ -1,0 +1,71 @@
+{
+  "chapter": "humors",
+  "number": "04",
+  "questions": [
+    {
+      "id": "humors-1",
+      "question": "Which four fluids made up the body in humoral theory?",
+      "options": [
+        "Blood, water, milk, and bile",
+        "Blood, phlegm, yellow bile, and black bile",
+        "Air, fire, water, and earth",
+        "Sweat, tears, blood, and urine"
+      ],
+      "answer": 1,
+      "explanation": "Blood, phlegm, yellow bile, and black bile were thought to compose the body. Health was proportion among them.",
+      "link": "/humors"
+    },
+    {
+      "id": "humors-2",
+      "question": "Which temperament was linked to yellow bile?",
+      "options": [
+        "Sanguine",
+        "Phlegmatic",
+        "Melancholic",
+        "Choleric"
+      ],
+      "answer": 3,
+      "explanation": "Yellow bile is hot and dry, tied to summer and fire, and gives the choleric temperament.",
+      "link": "/humors#the-four-at-a-glance"
+    },
+    {
+      "id": "humors-3",
+      "question": "Which season and element went with phlegm?",
+      "options": [
+        "Winter and water",
+        "Spring and air",
+        "Summer and fire",
+        "Autumn and earth"
+      ],
+      "answer": 0,
+      "explanation": "Phlegm is cold and wet, paired with winter and water. Winter coughs “pour phlegm.”",
+      "link": "/humors#the-four-at-a-glance"
+    },
+    {
+      "id": "humors-4",
+      "question": "Why did the humoral model last so long, according to the chapter?",
+      "options": [
+        "Because Rome made it law",
+        "Because microscopes seemed to confirm it",
+        "Because it was visible: anyone could see blood, mucus, and bile",
+        "Because it cured most diseases"
+      ],
+      "answer": 2,
+      "explanation": "It lasted because it was visible. Anyone could see blood, mucus, and bile, and heat and cold were felt every feverish night.",
+      "link": "/humors#why-the-model-felt-true"
+    },
+    {
+      "id": "humors-5",
+      "question": "What did the theory get right by accident?",
+      "options": [
+        "That four fluids are the whole physics of the body",
+        "That bloodletting cures fever",
+        "That black bile causes depression",
+        "That diet, season, sleep, and mood affect health"
+      ],
+      "answer": 3,
+      "explanation": "Diet, season, sleep, and mood do affect health. The error was treating four fluids as the whole physics of the body.",
+      "link": "/humors"
+    }
+  ]
+}

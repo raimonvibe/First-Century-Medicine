@@ -1,0 +1,71 @@
+{
+  "chapter": "surgery",
+  "number": "10",
+  "questions": [
+    {
+      "id": "surgery-1",
+      "question": "What was the usual anesthetic in first-century surgery?",
+      "options": [
+        "Wine",
+        "Opium in every village",
+        "Ether",
+        "Cold water"
+      ],
+      "answer": 0,
+      "explanation": "There was no reliable general anesthetic. Wine was the usual courage; how often mandrake and opium reached a Judean village is guesswork.",
+      "link": "/surgery"
+    },
+    {
+      "id": "surgery-2",
+      "question": "What is ligature, as Celsus describes it?",
+      "options": [
+        "Burning tissue with a hot iron",
+        "Setting a broken bone",
+        "Tying vessels to stop bleeding",
+        "Pulling a tooth with pliers"
+      ],
+      "answer": 2,
+      "explanation": "Celsus describes tying vessels to stop bleeding (ligature), along with setting bones, cutting for stone, and repairing hernia.",
+      "link": "/surgery"
+    },
+    {
+      "id": "surgery-3",
+      "question": "What did Celsus know about fever after a small wound?",
+      "options": [
+        "That it was a good sign of healing",
+        "That it meant the patient needed more wine",
+        "That it should be treated with a cold bath",
+        "That it was a bad sign: systemic infection, in our terms"
+      ],
+      "answer": 3,
+      "explanation": "Celsus knows fever after a small wound is a bad sign. He cannot name bacteria, but he can watch the mind, the rigor, and the delirium.",
+      "link": "/surgery#everyday-operations"
+    },
+    {
+      "id": "surgery-4",
+      "question": "What was cautery?",
+      "options": [
+        "A splint made of reeds",
+        "A hot iron used to seal a bleeder or burn rotten tissue",
+        "A honey dressing",
+        "A wine wash for wounds"
+      ],
+      "answer": 1,
+      "explanation": "A hot iron sealed a bleeder or burned rotten tissue. It sometimes stopped a local disaster.",
+      "link": "/surgery#everyday-operations"
+    },
+    {
+      "id": "surgery-5",
+      "question": "Which parts of the body were “almost closed countries” to surgeons?",
+      "options": [
+        "The hands and feet",
+        "The teeth and jaw",
+        "The chest and belly",
+        "The skin and scalp"
+      ],
+      "answer": 2,
+      "explanation": "The chest and belly were almost closed. Elective internal surgery on a living patient was not the village craft.",
+      "link": "/surgery#what-they-would-not-open"
+    }
+  ]
+}

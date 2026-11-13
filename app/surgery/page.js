@@ -33,7 +33,7 @@ export default function Page() {
         with heat and pain.
       </Quote>
 
-      <h2>Everyday operations</h2>
+      <h2 id="everyday-operations">Everyday operations</h2>
       <h3>Lancing and bleeding</h3>
       <p>
         Opening an abscess is true surgery and often wise: pus under
@@ -67,7 +67,7 @@ export default function Page() {
         still the only chance.
       </p>
 
-      <h2>What they would not open</h2>
+      <h2 id="what-they-would-not-open">What they would not open</h2>
       <p>
         The chest and belly were almost closed countries. Elective internal
         surgery on a living patient was not the village craft. Lithotomy
@@ -76,7 +76,7 @@ export default function Page() {
         not in every market town. Most deep injuries were a sentence.
       </p>
 
-      <h2>Cleanliness without germs</h2>
+      <h2 id="cleanliness-without-germs">Cleanliness without germs</h2>
       <p>
         Jewish washing, a preference for unused cloth, wine on the cut,
         honey’s hostility to rot: these are antisepsis by luck and
