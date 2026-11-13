@@ -27,7 +27,7 @@ export default function Page() {
         a time when recovery lies in the hands of physicians.
       </Quote>
 
-      <h2>God as healer in Israel</h2>
+      <h2 id="god-as-healer-in-israel">God as healer in Israel</h2>
       <p>
         The Psalms call the Lord the one who forgives and heals. Exodus
         remembers bitter water made sweet by wood — Sirach cites it as the
@@ -41,7 +41,7 @@ export default function Page() {
         and re-entry rites structured fear so that it had an ending.
       </p>
 
-      <h2>Jesus’s healings in that world</h2>
+      <h2 id="jesuss-healings-in-that-world">Jesus’s healings in that world</h2>
       <p>
         The Gospels present healings as signs of the kingdom, tied to
         faith, compassion, and authority. Sometimes there is touch, saliva,
@@ -58,7 +58,7 @@ export default function Page() {
         love, not a rejected pagan technique.
       </p>
 
-      <h2>Early Christian combination</h2>
+      <h2 id="early-christian-combination">Early Christian combination</h2>
       <ul>
         <li>
           James 5:14–15 — elders, prayer, oil, confession. Body and
@@ -74,7 +74,7 @@ export default function Page() {
         </li>
       </ul>
 
-      <h2>Demons and other causes</h2>
+      <h2 id="demons-and-other-causes">Demons and other causes</h2>
       <p>
         Some conditions were named as possession. Exorcism was a public
         act. Not every fever was a demon; not every demon-story was a

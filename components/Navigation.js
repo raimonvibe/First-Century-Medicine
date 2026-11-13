@@ -92,6 +92,14 @@ export default function Navigation() {
             Map
           </Link>
           <Link
+            href="/quizzes"
+            className={`font-sans text-sm tracking-wide hover:text-terracotta ${
+              pathname === "/quizzes" ? "text-terracotta" : "text-ink"
+            }`}
+          >
+            Quizzes
+          </Link>
+          <Link
             href="/herbs"
             className={`font-sans text-sm tracking-wide hover:text-terracotta ${
               pathname === "/herbs" ? "text-terracotta" : "text-ink"
@@ -157,6 +165,15 @@ export default function Navigation() {
           >
             <span aria-hidden="true" className="text-gold">✦</span>
             Map of places
+          </Link>
+          <Link
+            href="/quizzes"
+            className={`mb-4 flex min-h-11 items-center gap-2 border-b border-sand pb-3 font-display text-lg font-semibold ${
+              pathname === "/quizzes" ? "text-wine" : "text-olive"
+            }`}
+          >
+            <span aria-hidden="true" className="text-gold">✦</span>
+            Chapter quizzes
           </Link>
           {groups.map((group) => (
             <div key={group} className="mb-4">

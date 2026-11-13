@@ -1,0 +1,71 @@
+{
+  "chapter": "oils",
+  "number": "08",
+  "questions": [
+    {
+      "id": "oils-1",
+      "question": "What was the default vehicle, or base, of almost every ancient salve?",
+      "options": [
+        "Vinegar",
+        "Olive oil",
+        "Milk",
+        "Wine"
+      ],
+      "answer": 1,
+      "explanation": "Olive oil was food, lamp fuel, wrestler’s scrape, and the base of almost every salve.",
+      "link": "/oils"
+    },
+    {
+      "id": "oils-2",
+      "question": "What did adding beeswax to oil give you?",
+      "options": [
+        "A drink for the stomach",
+        "A perfume for the Temple",
+        "An ointment that stays put",
+        "A cleaning soap"
+      ],
+      "answer": 2,
+      "explanation": "Add beeswax to oil and you have an ointment that stays put, with a little resistance to heat.",
+      "link": "/oils#how-a-salve-was-built"
+    },
+    {
+      "id": "oils-3",
+      "question": "Why were mustard plasters applied?",
+      "options": [
+        "To burn the skin on purpose, as counter-irritation for a cold joint or tight chest",
+        "To cool a fever",
+        "To seal a cut with resin",
+        "To stop bleeding after surgery"
+      ],
+      "answer": 0,
+      "explanation": "Mustard plasters burned on purpose: a surface fire meant to stir blood in a cold joint or tight chest.",
+      "link": "/oils#poultices-and-plasters"
+    },
+    {
+      "id": "oils-4",
+      "question": "Which dressing does the chapter say still impresses microbiologists?",
+      "options": [
+        "Mustard on wool",
+        "Bitumen on leather",
+        "Salt on papyrus",
+        "Honey on linen"
+      ],
+      "answer": 3,
+      "explanation": "Honey on linen still impresses microbiologists because of its sugar, acidity, and slow peroxide.",
+      "link": "/oils#poultices-and-plasters"
+    },
+    {
+      "id": "oils-5",
+      "question": "What does James 5:14 tell the church to do for the sick?",
+      "options": [
+        "Send them to a Greek physician",
+        "Call the elders to pray and anoint",
+        "Bathe them in the mikveh",
+        "Keep them apart from the community"
+      ],
+      "answer": 1,
+      "explanation": "James 5:14 tells the church to call the elders to pray and anoint. The same jar of oil could be liturgical and clinical.",
+      "link": "/oils#anointing-as-more-than-metaphor"
+    }
+  ]
+}

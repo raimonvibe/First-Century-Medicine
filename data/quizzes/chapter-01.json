@@ -1,0 +1,71 @@
+{
+  "chapter": "introduction",
+  "number": "01",
+  "questions": [
+    {
+      "id": "introduction-1",
+      "question": "Which years does this site use as the usual scholarly window for Jesus’s lifetime?",
+      "options": [
+        "About 50 BC to 10 AD",
+        "About 6 BC to 33 AD",
+        "About 30 AD to 70 AD",
+        "About 100 to 150 AD"
+      ],
+      "answer": 1,
+      "explanation": "The introduction places Jesus’s lifetime between about 6 BC and 33 AD, the usual scholarly window.",
+      "link": "/introduction"
+    },
+    {
+      "id": "introduction-2",
+      "question": "Which three inheritances does the chapter say met in first-century medicine?",
+      "options": [
+        "Egyptian surgery, Persian astrology, and Indian herbs",
+        "Galen’s system, Christian miracles, and Arab pharmacy",
+        "Greek theory, Roman practice, and local Judean healing",
+        "Babylonian magic, Greek drama, and Celtic ritual"
+      ],
+      "answer": 2,
+      "explanation": "Greek thought supplied the prestige language, Roman application built and wrote things down, and local Judean practice never waited for a Greek textbook.",
+      "link": "/introduction#three-inheritances"
+    },
+    {
+      "id": "introduction-3",
+      "question": "Who compiled diet, drugs, and surgery in the Latin work De Medicina around the 30s AD?",
+      "options": [
+        "Aulus Cornelius Celsus",
+        "Galen of Pergamon",
+        "Pliny the Elder",
+        "Hippocrates of Kos"
+      ],
+      "answer": 0,
+      "explanation": "Celsus wrote De Medicina in the same generation as Jesus’s public life. The chapter calls it the closest encyclopaedia we have to that decade.",
+      "link": "/introduction#three-inheritances"
+    },
+    {
+      "id": "introduction-4",
+      "question": "What role did priests play among the people who treated the sick?",
+      "options": [
+        "They set broken bones in the Temple courts",
+        "They sold herbs and resins in the market",
+        "They delivered babies when midwives were absent",
+        "They decided when a skin condition made someone “unclean”"
+      ],
+      "answer": 3,
+      "explanation": "Priests did not set bones, but they did decide when a skin condition made someone “unclean.”",
+      "link": "/introduction#who-treated-the-sick"
+    },
+    {
+      "id": "introduction-5",
+      "question": "Which of these could first-century healers NOT do safely, according to the chapter?",
+      "options": [
+        "Splint a broken limb",
+        "Open the abdomen",
+        "Drain an abscess",
+        "Soothe a cough with honey"
+      ],
+      "answer": 1,
+      "explanation": "They could reduce fever with water, drain an abscess, splint a limb, and soothe a cough with honey. They could not open the abdomen safely.",
+      "link": "/introduction#what-they-could-and-could-not-do"
+    }
+  ]
+}

@@ -43,7 +43,7 @@ export default function Page() {
         </p>
       </Callout>
 
-      <h2>Explore the remedies</h2>
+      <h2 id="explore-the-remedies">Explore the remedies</h2>
       <p>
         Filter by Scripture, by local versus imported, or by the complaint
         a first-century healer might name. Open a card for period use and

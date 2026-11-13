@@ -1,0 +1,71 @@
+{
+  "chapter": "cases",
+  "number": "12",
+  "questions": [
+    {
+      "id": "cases-1",
+      "question": "In Case 01, the merchant with fever, what does the modern reading say about removing blood?",
+      "options": [
+        "It is still the best treatment",
+        "It does not help; cooling, fluids, and rest do",
+        "It works only on the third day",
+        "It cures malaria"
+      ],
+      "answer": 1,
+      "explanation": "Likely a viral or bacterial infection. Cooling, fluids, and rest help. Removing blood does not.",
+      "link": "/cases"
+    },
+    {
+      "id": "cases-2",
+      "question": "In Case 02, the older woman who cannot go, which part of the plan “actually works”?",
+      "options": [
+        "Avoiding all water",
+        "Bleeding from the arm",
+        "A mustard plaster on the belly",
+        "Senna or another cathartic tea"
+      ],
+      "answer": 3,
+      "explanation": "The plan says senna or another cathartic tea “actually works.” Senna is still in pharmacies, with the same cramping warning.",
+      "link": "/cases"
+    },
+    {
+      "id": "cases-3",
+      "question": "In Case 04, the child who cannot stop coughing, what does Celsus advise?",
+      "options": [
+        "Bleed the child at once",
+        "Give a full adult dose of wine",
+        "Do not bleed children readily, and do not starve them heroically",
+        "Keep her in a cold bath"
+      ],
+      "answer": 2,
+      "explanation": "Celsus says not to bleed children readily or starve them heroically. The plan uses honey with licorice or hyssop, a warm plaster, and steam.",
+      "link": "/cases"
+    },
+    {
+      "id": "cases-4",
+      "question": "In Case 06, the scaly rash, how do the physician’s and the priest’s jobs differ?",
+      "options": [
+        "The physician names a hot-dry corruption; the priest decides clean or unclean",
+        "The priest prescribes herbs; the physician performs rituals",
+        "They do exactly the same job",
+        "Only the physician may isolate the patient"
+      ],
+      "answer": 0,
+      "explanation": "A physician may say hot-dry corruption. A priest, if consulted, decides clean or unclean. Those are different jobs.",
+      "link": "/cases"
+    },
+    {
+      "id": "cases-5",
+      "question": "In Case 09, the old man who will not eat, what does the modern reading call “the treasure”?",
+      "options": [
+        "Bleeding for melancholy",
+        "The social prescription: food, people, and company",
+        "Strong unmixed wine",
+        "Complete bed rest in the dark"
+      ],
+      "answer": 1,
+      "explanation": "Walking with a grandson, music, and refusing to leave him alone. The social prescription was the treasure, not bloodletting.",
+      "link": "/cases"
+    }
+  ]
+}

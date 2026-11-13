@@ -1,0 +1,71 @@
+{
+  "chapter": "physicians",
+  "number": "02",
+  "questions": [
+    {
+      "id": "physicians-1",
+      "question": "Which of these writers was NOT a contemporary of Jesus?",
+      "options": [
+        "Celsus",
+        "Luke",
+        "Galen of Pergamon",
+        "Pliny the Elder"
+      ],
+      "answer": 2,
+      "explanation": "Galen was born in 129 AD. The chapter includes him only because later centuries read first-century practice through his humoral system.",
+      "link": "/physicians#galen"
+    },
+    {
+      "id": "physicians-2",
+      "question": "What are Celsus’s four signs of inflammation?",
+      "options": [
+        "Redness, swelling, heat, and pain",
+        "Fever, sweat, chills, and thirst",
+        "Pallor, cold, numbness, and weakness",
+        "Itching, scaling, dryness, and bruising"
+      ],
+      "answer": 0,
+      "explanation": "Celsus names redness, swelling, heat, and pain, a set of four still taught in medical schools.",
+      "link": "/physicians#celsus"
+    },
+    {
+      "id": "physicians-3",
+      "question": "How many plants does Dioscorides’ De Materia Medica describe?",
+      "options": [
+        "About 60 plants",
+        "About 6,000 plants",
+        "About 160 plants",
+        "Some 600 plants and 1,000 preparations"
+      ],
+      "answer": 3,
+      "explanation": "Between about 50 and 70 AD Dioscorides described some 600 plants and 1,000 preparations. His five books served Europe and the Islamic world for 1,500 years.",
+      "link": "/physicians#dioscorides"
+    },
+    {
+      "id": "physicians-4",
+      "question": "What did Asclepiades of Bithynia teach instead of heavy humoral drugging?",
+      "options": [
+        "That illness came only from demons",
+        "Diet, gentle exercise, bathing, wine, and a body made of pores and particles",
+        "That every patient should be bled each spring",
+        "That only priests should treat the sick"
+      ],
+      "answer": 1,
+      "explanation": "Asclepiades won Roman elites by preferring diet, gentle exercise, bathing, and wine. His theory said the body was pores and particles, not four fluids.",
+      "link": "/physicians#asclepiades"
+    },
+    {
+      "id": "physicians-5",
+      "question": "What does Ben Sira (Sirach 38) tell Jewish readers about physicians?",
+      "options": [
+        "Avoid them and rely on prayer alone",
+        "Use them only for broken bones",
+        "Honor them, for the Lord created them and created medicines out of the earth",
+        "Trust Greek physicians over Jewish ones"
+      ],
+      "answer": 2,
+      "explanation": "Sirach 38 says to honor physicians and that the Lord created medicines out of the earth: prayer first, then the doctor, who also prays.",
+      "link": "/physicians#sira"
+    }
+  ]
+}

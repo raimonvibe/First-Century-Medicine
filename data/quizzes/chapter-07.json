@@ -1,0 +1,71 @@
+{
+  "chapter": "herbs",
+  "number": "07",
+  "questions": [
+    {
+      "id": "herbs-1",
+      "question": "When did Dioscorides write De Materia Medica?",
+      "options": [
+        "About 400 BC",
+        "About 50–70 AD, a generation after Jesus",
+        "About 200 AD, after Galen",
+        "About 1000 AD"
+      ],
+      "answer": 1,
+      "explanation": "Dioscorides wrote around 50–70 AD, a generation after Jesus. He had studied at Tarsus and travelled as far as Petra.",
+      "link": "/herbs"
+    },
+    {
+      "id": "herbs-2",
+      "question": "How were plants sorted so they could be aimed at an imbalance?",
+      "options": [
+        "By color and size",
+        "By the day they were picked",
+        "As hot or cold, wet or dry",
+        "By price in the market"
+      ],
+      "answer": 2,
+      "explanation": "Plants were sorted as hot or cold, wet or dry, so a physician could aim them at a humoral imbalance.",
+      "link": "/herbs"
+    },
+    {
+      "id": "herbs-3",
+      "question": "Which plant does the chapter warn is toxic?",
+      "options": [
+        "Mandrake",
+        "Fennel",
+        "Lemon balm",
+        "Cumin"
+      ],
+      "answer": 0,
+      "explanation": "Mandrake is toxic, and senna and aloe latex are violently purgative. The explorer is a museum case, not a dispensary.",
+      "link": "/herbs"
+    },
+    {
+      "id": "herbs-4",
+      "question": "Which plant was bound as a poultice on King Hezekiah’s boil (2 Kings 20:7)?",
+      "options": [
+        "Hyssop",
+        "Myrrh",
+        "Mustard",
+        "Fig"
+      ],
+      "answer": 3,
+      "explanation": "The fig is one of the few plants the Hebrew Bible names as medicine: a fig poultice on Hezekiah’s boil.",
+      "link": "/herbs#explore-the-remedies"
+    },
+    {
+      "id": "herbs-5",
+      "question": "Where did spikenard, used to anoint Jesus at Bethany, come from?",
+      "options": [
+        "The hills of Judea",
+        "The Himalayas",
+        "The island of Lemnos",
+        "The Dead Sea shore"
+      ],
+      "answer": 1,
+      "explanation": "Spikenard was a Himalayan aromatic packed in alabaster flasks. Mary of Bethany’s nard was worth a laborer’s yearly wage.",
+      "link": "/herbs#explore-the-remedies"
+    }
+  ]
+}

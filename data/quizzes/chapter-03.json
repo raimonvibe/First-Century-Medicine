@@ -1,0 +1,71 @@
+{
+  "chapter": "judea",
+  "number": "03",
+  "questions": [
+    {
+      "id": "judea-1",
+      "question": "Where were the famous Judean balsam shrubs cultivated?",
+      "options": [
+        "In guarded gardens near Jericho and along the Dead Sea, including Ein Gedi",
+        "On the hills around Nazareth",
+        "In the Temple courts of Jerusalem",
+        "On the coast near Caesarea"
+      ],
+      "answer": 0,
+      "explanation": "Pliny, Josephus, Strabo, and Dioscorides describe guarded balsam gardens near Jericho and along the Dead Sea, including Ein Gedi.",
+      "link": "/judea#the-balsam-economy"
+    },
+    {
+      "id": "judea-2",
+      "question": "What happened to the balsam plantations after the war of 66–70 AD?",
+      "options": [
+        "They were burned and never replanted",
+        "They became imperial income",
+        "They were given to the Essenes",
+        "They were moved to Egypt"
+      ],
+      "answer": 1,
+      "explanation": "After the war of 66–70 AD the plantations became imperial income. A century later Galen still travelled to learn the drug on the spot.",
+      "link": "/judea#the-balsam-economy"
+    },
+    {
+      "id": "judea-3",
+      "question": "Which five plants does the Bible itself name as medicines?",
+      "options": [
+        "Garlic, onion, cumin, dill, and mint",
+        "Wine, honey, oil, salt, and vinegar",
+        "Myrrh, frankincense, aloes, cassia, and cinnamon",
+        "Fig, nard, hyssop, balm of Gilead, and mandrake"
+      ],
+      "answer": 3,
+      "explanation": "Only fig, nard, hyssop, balm of Gilead, and mandrake are named as medicines in the Bible. Many more plants were used.",
+      "link": "/judea#other-products-of-the-rift"
+    },
+    {
+      "id": "judea-4",
+      "question": "In Leviticus 13–15, who inspects a skin disease for color, depth, and spread?",
+      "options": [
+        "A Greek physician",
+        "A midwife",
+        "A priest",
+        "A root-cutter"
+      ],
+      "answer": 2,
+      "explanation": "Leviticus is priestly, not Hippocratic. A priest inspects the skin, quarantines, re-examines, and declares the person clean.",
+      "link": "/judea#purity-as-public-health"
+    },
+    {
+      "id": "judea-5",
+      "question": "What did the mikveh mark, according to the chapter?",
+      "options": [
+        "Return to the community after impurity",
+        "Treatment for rheumatism with hot water",
+        "A Roman-style bath with a hot room",
+        "A place to buy balsam"
+      ],
+      "answer": 0,
+      "explanation": "The mikveh, a pool of “living” water, marked return to the community. It is not a Roman therma.",
+      "link": "/judea#purity-as-public-health"
+    }
+  ]
+}

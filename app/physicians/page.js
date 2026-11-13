@@ -32,7 +32,7 @@ export default function Page() {
             <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-gold">
               {person.dates}
             </p>
-            <h2 className="!mt-1">{person.name}</h2>
+            <h2 id={person.id} className="!mt-1">{person.name}</h2>
             <p className="font-display text-xl text-wine">{person.role}</p>
             <p>{person.summary}</p>
             <p className="text-ink-soft">{person.whyItMatters}</p>
@@ -40,7 +40,7 @@ export default function Page() {
         ))}
       </div>
 
-      <h2>Schools in collision</h2>
+      <h2 id="schools-in-collision">Schools in collision</h2>
       <p>
         Later textbooks flatten this into “Galenic medicine.” In Jesus’s
         lifetime Galen is unborn. You could follow humoral balance, or

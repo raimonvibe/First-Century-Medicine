@@ -30,7 +30,7 @@ export default function Page() {
         cold, wet and dry, were felt every feverish night.
       </p>
 
-      <h2>The four, at a glance</h2>
+      <h2 id="the-four-at-a-glance">The four, at a glance</h2>
       <p>
         Select a humor. Each pairing of quality, season, element, and
         temperament gave the physician a script: cool the hot, dry the wet,
@@ -38,7 +38,7 @@ export default function Page() {
       </p>
       <HumorDiagram />
 
-      <h2>Why the model felt true</h2>
+      <h2 id="why-the-model-felt-true">Why the model felt true</h2>
       <ul>
         <li>
           Fevers look like excess heat and often flush the face — “too much
@@ -72,7 +72,7 @@ export default function Page() {
         the dissent.
       </Quote>
 
-      <h2>Temperament: character as physiology</h2>
+      <h2 id="temperament-character-as-physiology">Temperament: character as physiology</h2>
       <p>
         Humoral language leaked into personality. A sanguine friend was
         convivial; a choleric official, sharp; a phlegmatic neighbor, slow

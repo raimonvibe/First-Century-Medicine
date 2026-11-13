@@ -1,0 +1,71 @@
+{
+  "chapter": "bloodletting",
+  "number": "05",
+  "questions": [
+    {
+      "id": "bloodletting-1",
+      "question": "Which three ways of taking blood does the chapter describe?",
+      "options": [
+        "Venesection, leeches, and cupping",
+        "Cautery, ligature, and amputation",
+        "Purging, sweating, and fasting",
+        "Fasting, anointing, and bathing"
+      ],
+      "answer": 0,
+      "explanation": "Venesection opens a vein, leeches do the measuring themselves, and cupping draws skin and sometimes blood into a heated cup.",
+      "link": "/bloodletting#three-ways-to-take-blood"
+    },
+    {
+      "id": "bloodletting-2",
+      "question": "How did wet cupping differ from dry cupping?",
+      "options": [
+        "It used cold water instead of a heated cup",
+        "It added small cuts so blood entered the cup",
+        "It used leeches inside the cup",
+        "It was done only on the scalp"
+      ],
+      "answer": 1,
+      "explanation": "Dry cupping raised a bruise. Wet cupping added small cuts so blood entered the cup.",
+      "link": "/bloodletting#three-ways-to-take-blood"
+    },
+    {
+      "id": "bloodletting-3",
+      "question": "What did Celsus note about bleeding the young, the old, and the pregnant?",
+      "options": [
+        "He bled them more than anyone else",
+        "He said only priests could bleed them",
+        "It had once been forbidden and then became more common",
+        "He thought leeches were the only safe method"
+      ],
+      "answer": 2,
+      "explanation": "Celsus notes that bleeding these groups had once been forbidden and then became more common. His caution about children is the humane note in a dangerous habit.",
+      "link": "/bloodletting#three-ways-to-take-blood"
+    },
+    {
+      "id": "bloodletting-4",
+      "question": "Why did bloodletting seem to work?",
+      "options": [
+        "It removed germs from the blood",
+        "It lowered blood sugar",
+        "It was always combined with antibiotics",
+        "Many acute diseases end in a few days regardless, and the patient may feel briefly cooler"
+      ],
+      "answer": 3,
+      "explanation": "A feverish patient may feel a brief coolness after losing blood, and many acute diseases end on their own. Failures were explained as too little, too late, or the wrong day.",
+      "link": "/bloodletting#why-it-seemed-to-work"
+    },
+    {
+      "id": "bloodletting-5",
+      "question": "Until when did bloodletting remain respectable in Europe?",
+      "options": [
+        "The fifth century",
+        "The nineteenth century",
+        "The twelfth century",
+        "It was abandoned soon after Celsus"
+      ],
+      "answer": 1,
+      "explanation": "The practice was already old in 30 AD and stayed respectable in Europe until the nineteenth century, a warning about how long a coherent error can live.",
+      "link": "/bloodletting"
+    }
+  ]
+}

@@ -45,6 +45,9 @@ export default function Footer() {
           <Link href="/map" className="font-sans text-sm text-sage hover:text-foam">
             Map
           </Link>
+          <Link href="/quizzes" className="font-sans text-sm text-sage hover:text-foam">
+            Quizzes
+          </Link>
         </div>
       </div>
     </footer>

@@ -1,0 +1,71 @@
+{
+  "chapter": "bathing",
+  "number": "06",
+  "questions": [
+    {
+      "id": "bathing-1",
+      "question": "In a Roman bath, what was the caldarium?",
+      "options": [
+        "The cold plunge",
+        "The warm resting room",
+        "The hot room",
+        "The oiling room"
+      ],
+      "answer": 2,
+      "explanation": "The sequence ran through the warm tepidarium, the hot caldarium, and the cold frigidarium.",
+      "link": "/bathing#the-roman-sequence"
+    },
+    {
+      "id": "bathing-2",
+      "question": "What was a strigil used for in the bath?",
+      "options": [
+        "Scraping the skin after oiling",
+        "Heating the water",
+        "Measuring a fever",
+        "Cutting a vein"
+      ],
+      "answer": 0,
+      "explanation": "Bathers moved through temperatures with oiling and scraping (the strigil) in between.",
+      "link": "/bathing#the-roman-sequence"
+    },
+    {
+      "id": "bathing-3",
+      "question": "What did Celsus suggest for near-feverish exhaustion?",
+      "options": [
+        "A blast of heat in the caldarium",
+        "A cold plunge to shock the body",
+        "No water at all for a week",
+        "A milder hip bath with a little oil in the water"
+      ],
+      "answer": 3,
+      "explanation": "A near-feverish exhaustion got a milder hip bath with a little oil in the water, not a blast of heat.",
+      "link": "/bathing#the-roman-sequence"
+    },
+    {
+      "id": "bathing-4",
+      "question": "What was cold used for as a “drug”?",
+      "options": [
+        "To warm cold-wet phlegm",
+        "To check swelling: cold cloths for headache and cool rooms for fever",
+        "To thicken the blood before surgery",
+        "To open the pores for sweating"
+      ],
+      "answer": 1,
+      "explanation": "Cold checks swelling. Cooling the surface is a rational reply to inflammation’s redness, swelling, heat, and pain.",
+      "link": "/bathing#cold-as-a-drug"
+    },
+    {
+      "id": "bathing-5",
+      "question": "How did bathing time change with the diagnosis?",
+      "options": [
+        "Longer heat for cold-wet phlegm; shorter, cooler visits for hot-dry bile",
+        "Everyone bathed exactly one hour",
+        "Only the rich were allowed long baths",
+        "Hot baths for fever, cold baths for coughs, always"
+      ],
+      "answer": 0,
+      "explanation": "Duration and temperature tracked the diagnosis: longer heat for cold-wet phlegm, shorter and cooler visits for hot-dry bile.",
+      "link": "/bathing#how-long-how-often"
+    }
+  ]
+}

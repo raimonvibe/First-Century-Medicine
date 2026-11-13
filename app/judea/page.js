@@ -20,7 +20,7 @@ export default function Page() {
         plugged into the same balsam, bitumen, and spice routes.
       </p>
 
-      <h2>The balsam economy</h2>
+      <h2 id="the-balsam-economy">The balsam economy</h2>
       <p>
         Ancient writers — Pliny, Josephus, Strabo, Dioscorides — treat
         Judean balsam as almost unique. The shrubs were cultivated in
@@ -36,7 +36,7 @@ export default function Page() {
         instinctively hostile to materia medica. They grew it for the world.
       </p>
 
-      <h2>Other products of the rift</h2>
+      <h2 id="other-products-of-the-rift">Other products of the rift</h2>
       <ul>
         <li>
           Dead Sea bitumen, used in preparations and trade — a mineral
@@ -63,7 +63,7 @@ export default function Page() {
         not about an empty hillside.
       </Quote>
 
-      <h2>Purity as public health</h2>
+      <h2 id="purity-as-public-health">Purity as public health</h2>
       <p>
         Leviticus 13–15 is priestly, not Hippocratic. A priest inspects
         color, depth, and spread of skin disease (<em>tzara’at</em>, a
@@ -82,7 +82,7 @@ export default function Page() {
         same meaning.
       </p>
 
-      <h2>Physicians in Jewish memory</h2>
+      <h2 id="physicians-in-jewish-memory">Physicians in Jewish memory</h2>
       <p>
         King Asa is blamed in Chronicles for seeking physicians instead of
         the Lord — a text that later readers used to suspect doctors. Ben

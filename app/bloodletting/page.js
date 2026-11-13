@@ -21,7 +21,7 @@ export default function Page() {
         is a warning about how long a coherent error can live.
       </p>
 
-      <h2>Three ways to take blood</h2>
+      <h2 id="three-ways-to-take-blood">Three ways to take blood</h2>
       <h3>Venesection (phlebotomy)</h3>
       <p>
         A lancet opened a vein, usually in the arm. The amount was judged
@@ -49,7 +49,7 @@ export default function Page() {
         there should be scarcely any malady in which blood may not be let.
       </Quote>
 
-      <h2>When they reached for the lancet</h2>
+      <h2 id="when-they-reached-for-the-lancet">When they reached for the lancet</h2>
       <ul>
         <li>Fevers and inflammations (hot, red, full pulse).</li>
         <li>Headaches thought to come from blood crowding the head.</li>
@@ -65,7 +65,7 @@ export default function Page() {
         scientific it felt.
       </p>
 
-      <h2>Why it seemed to work</h2>
+      <h2 id="why-it-seemed-to-work">Why it seemed to work</h2>
       <p>
         A feverish patient may feel a brief coolness after losing blood.
         Many acute diseases end in a few days regardless. The physician who

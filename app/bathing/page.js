@@ -21,7 +21,7 @@ export default function Page() {
         prescription pad.
       </p>
 
-      <h2>The Roman sequence</h2>
+      <h2 id="the-roman-sequence">The Roman sequence</h2>
       <p>
         A city bath was a machine for moving the body through temperatures:
         warm tepidarium, hot caldarium, cold frigidarium, with oiling and
@@ -58,7 +58,7 @@ export default function Page() {
         </div>
       </div>
 
-      <h2>Cold as a drug</h2>
+      <h2 id="cold-as-a-drug">Cold as a drug</h2>
       <p>
         Inflammation, in Celsus’s famous four signs, is red, swollen, hot,
         and painful. Cooling the surface is a rational reply. Cold cloths
@@ -80,7 +80,7 @@ export default function Page() {
         another: holiness with a quarantine diagram.
       </Quote>
 
-      <h2>How long, how often</h2>
+      <h2 id="how-long-how-often">How long, how often</h2>
       <p>
         A physician might order morning and evening bathing for weeks.
         Duration and temperature tracked the diagnosis: longer heat for

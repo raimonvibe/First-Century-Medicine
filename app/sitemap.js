@@ -16,6 +16,12 @@ export default function sitemap() {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${SITE_URL}/quizzes`,
+      lastModified: new Date("2026-11-13"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     ...chapters.map((chapter) => ({
       url: `${SITE_URL}${chapter.href}`,
       lastModified: now,
