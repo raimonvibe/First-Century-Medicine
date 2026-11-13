@@ -84,6 +84,14 @@ export default function Navigation() {
             ) : null}
           </div>
           <Link
+            href="/map"
+            className={`font-sans text-sm tracking-wide hover:text-terracotta ${
+              pathname === "/map" ? "text-terracotta" : "text-ink"
+            }`}
+          >
+            Map
+          </Link>
+          <Link
             href="/herbs"
             className={`font-sans text-sm tracking-wide hover:text-terracotta ${
               pathname === "/herbs" ? "text-terracotta" : "text-ink"
@@ -141,6 +149,15 @@ export default function Navigation() {
 
       {open ? (
         <div className="max-h-[min(70dvh,calc(100dvh-var(--speech-dock-height,10.5rem)-5rem))] overflow-y-auto overscroll-contain border-t border-sand bg-cream px-4 py-4 lg:hidden">
+          <Link
+            href="/map"
+            className={`mb-4 flex min-h-11 items-center gap-2 border-b border-sand pb-3 font-display text-lg font-semibold ${
+              pathname === "/map" ? "text-wine" : "text-olive"
+            }`}
+          >
+            <span aria-hidden="true" className="text-gold">✦</span>
+            Map of places
+          </Link>
           {groups.map((group) => (
             <div key={group} className="mb-4">
               <p className="mb-1 font-sans text-[10px] uppercase tracking-[0.2em] text-gold">
